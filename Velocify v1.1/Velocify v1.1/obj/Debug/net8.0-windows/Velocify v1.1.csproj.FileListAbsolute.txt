@@ -35,3 +35,4 @@ C:\Users\omarv\source\repos\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows
 C:\Users\omarv\source\repos\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\omarv\source\repos\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.csproj.AssemblyReference.cache
 C:\Users\omarv\source\repos\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify.6F62EEAC.Up2Date
+C:\Users\omarv\source\repos\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.APITestForm.resources

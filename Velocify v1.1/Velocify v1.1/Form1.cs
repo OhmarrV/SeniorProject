@@ -14,6 +14,11 @@ namespace Velocify_v1._1
 
         private void gameButton_Click(object sender, EventArgs e)
         {
+            
+            APITestForm APIForm = new APITestForm();
+            APIForm.Show();
+            this.Hide();
+
             MessageBox.Show("Hello World!");
         }
 

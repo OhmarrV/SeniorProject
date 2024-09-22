@@ -42,27 +42,29 @@ namespace Velocify_v1._1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
 
-            if ((username1 == usernameTextBox.Text.ToLower() && password1 == passwordTextBox.Text)||(username2 == usernameTextBox.Text.ToLower() && password2 == passwordTextBox.Text))
-            {
-                currUser = 1;
+            //if ((username1 == usernameTextBox.Text.ToLower() && password1 == passwordTextBox.Text)||(username2 == usernameTextBox.Text.ToLower() && password2 == passwordTextBox.Text))
+            //{
+            //    currUser = 1;
 
-                MessageBox.Show("LOGIN SUCCESSFUL: \nUser: "+username2+"   Password: "+password2+"   ID: "+currUser2);
-                //load form1
-                Form1 form1 = new Form1();
-                form1.Show();
-                this.Hide();
+            //    MessageBox.Show("LOGIN SUCCESSFUL: \nUser: "+username2+"   Password: "+password2+"   ID: "+currUser2);
+            //    //load form1
+            //    Form1 form1 = new Form1();
+            //    form1.Show();
+            //    this.Hide();
 
 
-            }
-            else
-            {
-                MessageBox.Show("LOGIN FAILED");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("LOGIN FAILED");
+            //}
         }
 
 
-        
+
     }
 }
