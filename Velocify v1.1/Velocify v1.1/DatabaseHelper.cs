@@ -3,9 +3,9 @@ using System.Data.SQLite;
 
 namespace Velocify_v1._1
 {
-    internal class DatabaseHelper
+    internal class DatabaseHelper 
     {
-        private string connectionString = @"Data Source=C:\Users\omarv\OneDrive\Documents\Visual Studio 2022\Databases\VelocifyUsers.db; Version=3";
+        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SeniorProject\VelocifyUsers.db; Version=3";
         public SQLiteConnection GetConnection() 
         {
             return new SQLiteConnection(connectionString);

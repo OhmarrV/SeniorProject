@@ -55,6 +55,16 @@ namespace Velocify_v1._1
             // Display the fetched data in the TextBox
             txtGameData.Text = gameData;
 
+            //grab the cover URL from the JSON response
+            string coverUrl = "https://images.igdb.com/igdb/image/upload/t_cover_big/co885f.jpg";
+            MessageBox.Show(coverUrl);
+
+            pictureBox1.Load(coverUrl);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

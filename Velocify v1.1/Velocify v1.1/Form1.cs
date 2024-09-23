@@ -14,7 +14,7 @@ namespace Velocify_v1._1
 
         private void gameButton_Click(object sender, EventArgs e)
         {
-            
+
             APITestForm APIForm = new APITestForm();
             APIForm.Show();
             this.Hide();
@@ -28,6 +28,11 @@ namespace Velocify_v1._1
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

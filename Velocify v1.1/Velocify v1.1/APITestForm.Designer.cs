@@ -30,13 +30,16 @@
         {
             apiButton = new Button();
             txtGameData = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // apiButton
             // 
-            apiButton.Location = new Point(123, 375);
+            apiButton.Location = new Point(141, 500);
+            apiButton.Margin = new Padding(3, 4, 3, 4);
             apiButton.Name = "apiButton";
-            apiButton.Size = new Size(75, 23);
+            apiButton.Size = new Size(86, 31);
             apiButton.TabIndex = 0;
             apiButton.Text = "button1";
             apiButton.UseVisualStyleBackColor = true;
@@ -44,22 +47,36 @@
             // 
             // txtGameData
             // 
-            txtGameData.Location = new Point(86, 41);
+            txtGameData.Location = new Point(98, 55);
+            txtGameData.Margin = new Padding(3, 4, 3, 4);
             txtGameData.Multiline = true;
             txtGameData.Name = "txtGameData";
-            txtGameData.Size = new Size(606, 298);
+            txtGameData.Size = new Size(692, 145);
             txtGameData.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox1.Location = new Point(320, 250);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(260, 338);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // APITestForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(pictureBox1);
             Controls.Add(txtGameData);
             Controls.Add(apiButton);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "APITestForm";
             Text = "APITestForm";
             Load += APITestForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -68,5 +85,6 @@
 
         private Button apiButton;
         private TextBox txtGameData;
+        private PictureBox pictureBox1;
     }
 }
