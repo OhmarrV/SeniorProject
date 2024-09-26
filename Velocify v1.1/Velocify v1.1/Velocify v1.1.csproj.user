@@ -7,6 +7,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GamePanelFLEX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +17,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GameAddButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MainPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="NetworkPanelFLEX.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserInfo.cs">
