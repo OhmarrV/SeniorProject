@@ -1215,31 +1215,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omarv\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\acant\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omarv\\source\\repos\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+      "projectUniqueName": "C:\\Senior\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
       "projectName": "Velocify v1.1",
-      "projectPath": "C:\\Users\\omarv\\source\\repos\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
-      "packagesPath": "C:\\Users\\omarv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omarv\\source\\repos\\Velocify v1.1\\Velocify v1.1\\obj\\",
+      "projectPath": "C:\\Senior\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+      "packagesPath": "C:\\Users\\acant\\.nuget\\packages\\",
+      "outputPath": "C:\\Senior\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\omarv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\acant\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1252,11 +1245,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1287,7 +1275,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
