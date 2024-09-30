@@ -42,18 +42,27 @@ namespace Velocify_v1._1
             txtGameData.Clear();
 
             // Get the game ID from a TextBox or set it directly
-            int gameId = 125174;
+            //int gameId = 125174;
+            string gameName = "Overwatch 2";
             //if (!int.TryParse(txtGameData.Text, out gameId))
             //{
             //    txtGameData.Text = "Please enter a valid game ID.";
             //    return;
             //}
+            //fetching game data
+            var (id, name, coverUrl) = await APIFile.GetGameDataAsync(gameName);
 
             // Call the API method to fetch game data by ID
-            string gameData = await APIFile.GetGameByIdAsync(gameId);
+            //string gameData = await APIFile.GetGameByIdAsync(gameId);
 
             // Display the fetched data in the TextBox
-            txtGameData.Text = gameData;
+            //txtGameData.Text = gameData;
+            // Displaying fetched data TextBox
+            txtGameData.Text = $"ID: {id}\nName: {name}\nCover URL: {coverUrl}";
+
+            // Inserting game into the database
+            //DatabaseHelper dbHelper = new DatabaseHelper();
+            //dbHelper.InsertGame(id, name, coverUrl);
 
         }
     }

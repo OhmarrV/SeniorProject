@@ -68,13 +68,13 @@
         public void addGameBtn_Click(object sender, EventArgs e)
         {
             //replace the GameAddButton with the GamePanel
-            UserControl gamePanel = new GamePanel();
-            UserControl addNewGame = new GameAddButton();
-            this.Parent.Controls.Add(gamePanel);
-            this.Parent.Controls.Add(addNewGame);
-            this.Parent.Controls.Remove(this);
+            //UserControl GameSelection = new GameSelection();
+            //this.Parent.Controls.Add(GameSelection);
+            //this.Parent.Controls.Remove(this);
+            SearchForGames searchForm = new SearchForGames();
 
-            MessageBox.Show("Game Added! ");
+            searchForm.ShowDialog();
+            //MessageBox.Show("Game Added! ");
         }
 
         #endregion

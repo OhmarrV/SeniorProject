@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Newtonsoft.Json.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Newtonsoft.Json;
 
 namespace Velocify_v1._1
 {
@@ -18,7 +21,7 @@ namespace Velocify_v1._1
         private static readonly string baseUrl = "https://api.igdb.com/v4/games";
 
         // Method to fetch game data
-        public static async Task<string> GetGameDataAsync(string gameName)
+        public static async Task<(int id, string name, string coverUrl)> GetGameDataAsync(string gameName)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -36,14 +39,19 @@ namespace Velocify_v1._1
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // Read and return the response content
-                    return await response.Content.ReadAsStringAsync();
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    // Parse JSON to extract id, name, and cover URL
+                    JArray data = JArray.Parse(jsonResponse);
+                    if (data.Count > 0)
+                    {
+                        int id = data[0]["id"].Value<int>();
+                        string name = data[0]["name"].Value<string>();
+                        string coverUrl = data[0]["cover"]?["url"]?.Value<string>() ?? "No URL";
+                        return (id, name, coverUrl);
+                    }
                 }
-                else
-                {
-                    // Return error message if API call fails
-                    return $"Error: {response.StatusCode} - {response.ReasonPhrase}";
-                }
+                return (0, "Error", "Error");
             }
 
         }
@@ -73,6 +81,52 @@ namespace Velocify_v1._1
                 }
             }
         }
+
+        public static async Task<List<GameData>> GetAllGamesAsync()
+        {
+            List<GameData> games = new List<GameData>();
+            // Fetch the game data from your API or database
+            // Here, I'm providing a dummy implementation, replace it with actual logic
+
+            // Example: Making an API call or database query
+            // var response = await httpClient.GetAsync("your_api_endpoint");
+            // if (response.IsSuccessStatusCode)
+            // {
+            //     var content = await response.Content.ReadAsStringAsync();
+            //     games = JsonConvert.DeserializeObject<List<GameData>>(content);
+            // }
+
+            // For demonstration, let's add some dummy data
+            games.Add(new GameData { id = 1, name = "Fortnite", coverUrl = "url_to_cover" });
+            games.Add(new GameData { id = 2, name = "Minecraft", coverUrl = "url_to_cover" });
+            // Add more games as needed
+
+            return games;
+        }
+
+        public static async Task<List<GameData>> GetGamesByNameAsync(string gameName)
+        {
+            List<GameData> games = new List<GameData>();
+
+            // Replace this with your actual API URL and request logic
+            string url = $"https://api.igdb.com/v4/games"; // Your IGDB API endpoint for searching games
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Client-ID", clientId); // Your IGDB Client ID
+                client.DefaultRequestHeaders.Add("Authorization", accessToken); // Your IGDB Access Token
+
+                var content = new StringContent($"search \"{gameName}\"; fields name, id, cover.url;", Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+                    games = JsonConvert.DeserializeObject<List<GameData>>(jsonResponse);
+                }
+            }
+
+            return games;
+        }
+
 
     }
 }
