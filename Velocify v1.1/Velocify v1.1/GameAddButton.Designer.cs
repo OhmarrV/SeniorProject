@@ -67,7 +67,20 @@
 
         public void addGameBtn_Click(object sender, EventArgs e)
         {
-            //replace the GameAddButton with the GamePanel
+            SearchForGames searchForm = new SearchForGames();
+            searchForm.ShowDialog();
+
+            if(DialogResult.OK == searchForm.ShowDialog())
+            {
+                gameAdded();
+                SearchForGames search = new SearchForGames();
+                search.isOpen(false); //working on this
+            }
+        }
+
+        private void gameAdded() 
+        {
+            //    //replace the GameAddButton with the GamePanel
             UserControl gamePanel = new GamePanel();
             UserControl addNewGame = new GameAddButton();
             this.Parent.Controls.Add(gamePanel);

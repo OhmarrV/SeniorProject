@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\gameaddbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gameaddbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\searchforgames.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\searchforgames.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\velocify v1.1\\gamepanelflex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamepanelflex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\gamepanelflex.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamepanelflex.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\apifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\apifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +45,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\gamepanelflex.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamepanelflex.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\velocify v1.1\\gamepanelflex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamepanelflex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\omarv\\onedrive\\documents\\fall 24 workspace\\senior project git\\seniorproject\\velocify v1.1\\velocify v1.1\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +74,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchForGames.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.Designer.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\SearchForGames.Designer.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.Designer.cs",
+              "RelativeToolTip": "Velocify v1.1\\SearchForGames.Designer.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAC8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:07:08.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SearchForGames.cs",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\SearchForGames.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs",
+              "RelativeToolTip": "Velocify v1.1\\SearchForGames.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAQwFkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T18:05:43.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SearchForGames.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\SearchForGames.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs [Design]",
+              "RelativeToolTip": "Velocify v1.1\\SearchForGames.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:58:05.123Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameAddButton.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.Designer.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\GameAddButton.Designer.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.Designer.cs",
+              "RelativeToolTip": "Velocify v1.1\\GameAddButton.Designer.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:54:30.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "GameAddButton.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\GameAddButton.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.cs [Design]",
+              "RelativeToolTip": "Velocify v1.1\\GameAddButton.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:54:11.012Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Program.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\Program.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Program.cs",
+              "RelativeToolTip": "Velocify v1.1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:52:43.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Velocify v1.1\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:21:23.893Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "APIFile.cs",
+              "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APIFile.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\APIFile.cs",
+              "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APIFile.cs",
+              "RelativeToolTip": "Velocify v1.1\\APIFile.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:41:26.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\Form1.Designer.cs",
@@ -54,35 +187,38 @@
               "RelativeToolTip": "Velocify v1.1\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T01:02:09.228Z"
+              "WhenOpened": "2024-09-24T01:02:09.228Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\DatabaseHelper.cs",
               "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\DatabaseHelper.cs",
               "RelativeToolTip": "Velocify v1.1\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAADRAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAUwE0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:11:54.419Z"
+              "WhenOpened": "2024-09-09T03:11:54.419Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\LoginForm.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\LoginForm.cs",
               "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\LoginForm.cs",
               "RelativeToolTip": "Velocify v1.1\\LoginForm.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAcwB0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAiwEgAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T21:40:02.842Z"
+              "WhenOpened": "2024-09-08T21:40:02.842Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "UserInfo.cs",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\UserInfo.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\UserInfo.cs",
@@ -90,35 +226,37 @@
               "RelativeToolTip": "Velocify v1.1\\UserInfo.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAADwvxUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T03:37:37.956Z"
+              "WhenOpened": "2024-09-08T03:37:37.956Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "GamePanelFLEX.cs [Design]",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanelFLEX.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\GamePanelFLEX.cs",
               "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanelFLEX.cs [Design]",
               "RelativeToolTip": "Velocify v1.1\\GamePanelFLEX.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T23:57:43.964Z"
+              "WhenOpened": "2024-09-23T23:57:43.964Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\Form1.cs",
               "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
               "RelativeToolTip": "Velocify v1.1\\Form1.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDQAAACZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAACZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T21:03:53.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "GamePanelFLEX.Designer.cs",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanelFLEX.Designer.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\GamePanelFLEX.Designer.cs",
@@ -126,18 +264,20 @@
               "RelativeToolTip": "Velocify v1.1\\GamePanelFLEX.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T23:57:57.406Z"
+              "WhenOpened": "2024-09-23T23:57:57.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\Form1.cs",
               "ToolTip": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs [Design]",
               "RelativeToolTip": "Velocify v1.1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T23:50:23.432Z"
+              "WhenOpened": "2024-09-05T23:50:23.432Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
