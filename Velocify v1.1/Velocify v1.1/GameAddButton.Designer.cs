@@ -68,17 +68,15 @@
         public void addGameBtn_Click(object sender, EventArgs e)
         {
             SearchForGames searchForm = new SearchForGames();
-            searchForm.ShowDialog();
+            //searchForm.ShowDialog();
 
-            if(DialogResult.OK == searchForm.ShowDialog())
+            if (DialogResult.OK == searchForm.ShowDialog())
             {
-                gameAdded();
-                SearchForGames search = new SearchForGames();
-                search.isOpen(false); //working on this
+                gameAdded();                
             }
         }
 
-        private void gameAdded() 
+        private void gameAdded() //Working on passing in game information. Will be stored in the game added panel
         {
             //    //replace the GameAddButton with the GamePanel
             UserControl gamePanel = new GamePanel();
@@ -87,7 +85,7 @@
             this.Parent.Controls.Add(addNewGame);
             this.Parent.Controls.Remove(this);
 
-            MessageBox.Show("Game Added! ");
+            //MessageBox.Show("Game Added! ");
         }
 
         #endregion

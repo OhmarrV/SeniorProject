@@ -75,26 +75,8 @@ namespace Velocify_v1._1
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            
-            //q: can i make this the DialogResult.OK button?
-            //a: Yes, you can set the DialogResult property of the button to DialogResult.OK
-
             DialogResult = DialogResult.OK;
-            //this.Close();
-
             //MessageBox.Show("Game Added! ");
-        }
-
-        public void isOpen(bool open) 
-        {
-            if(open)
-            {
-                this.Show();
-            }
-            else
-            {
-                this.Hide();
-            }
         }
 
         private async void textBox1_TextChanged(object sender, EventArgs e)
