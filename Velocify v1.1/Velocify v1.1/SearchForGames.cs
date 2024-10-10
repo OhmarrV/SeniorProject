@@ -12,7 +12,6 @@ namespace Velocify_v1._1
 {
     public partial class SearchForGames : Form
     {
-
         private List<GameData> allGames;
 
         public SearchForGames()
@@ -27,12 +26,6 @@ namespace Velocify_v1._1
             allGames = await APIFile.GetAllGamesAsync(); // Implement this method to get all games
             UpdateGameListBox(""); // Populate list box with all games initially
         }
-
-        //private void textBox1_TextChanged(object sender, EventArgs e)
-        //{
-        //    string searchQuery = textBox1.Text.ToLower();
-        //    UpdateGameListBox(searchQuery); // Update the list box based on the current text
-        //}
 
         private void UpdateGameListBox(string searchQuery)
         {
@@ -60,6 +53,7 @@ namespace Velocify_v1._1
                 if (gameData.id != 0)
                 {
                     // Display the game data (game name, id, cover URL) in the ListBox
+                    gamesListBox.Items.Clear(); // Clear previous results
                     gamesListBox.Items.Add($"Name: {gameData.name}, ID: {gameData.id}, Cover URL: {gameData.coverUrl}");
                 }
                 else
@@ -80,33 +74,39 @@ namespace Velocify_v1._1
 
         private async void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string gameName = textBox1.Text;
+            string searchQuery = textBox1.Text.ToLower();
 
-            if (!string.IsNullOrEmpty(gameName))
+            // Ensure you only call the API if there is input
+            if (!string.IsNullOrEmpty(searchQuery))
             {
-                // Call the API to search for the game
-                var gameData = await APIFile.GetGameDataAsync(gameName); // Using your old method
+                // Split the search query to separate name and genre if necessary
+                string[] searchTerms = searchQuery.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                string nameQuery = searchTerms.Length > 0 ? searchTerms[0] : "";
+                string genreQuery = searchTerms.Length > 1 ? searchTerms[1] : ""; 
 
-                // Clear the previous items
+                // Call the API with the name and genre
+                var gamesByNameAndGenre = await APIFile.GetGamesByNameAndGenreAsync(nameQuery, genreQuery);
+
+                // Clear the list box before adding new items
                 gamesListBox.Items.Clear();
 
-                if (gameData.id != 0)
+                if (gamesByNameAndGenre != null && gamesByNameAndGenre.Count > 0)
                 {
-                    // Display the game data (game name, id, cover URL) in the ListBox
-                    gamesListBox.Items.Add($"Name: {gameData.name}, ID: {gameData.id}, Cover URL: {gameData.coverUrl}");
+                    foreach (var game in gamesByNameAndGenre)
+                    {
+                        gamesListBox.Items.Add($"Name: {game.name}, Genre: {game.genre}, ID: {game.id}");
+                    }
                 }
                 else
                 {
-                    gamesListBox.Items.Add("No games found."); // Adjust the message here if needed
+                    gamesListBox.Items.Add("No games found.");
                 }
             }
             else
             {
-                // Clear the list box if the search box is empty
                 gamesListBox.Items.Clear();
             }
         }
-
-
     }
 }
+

@@ -7,35 +7,43 @@
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gamselection.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamselection.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\apifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\apifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\searchforgames.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\searchforgames.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\apifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\apifile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gameaddbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gameaddbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gameaddbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gameaddbutton.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\gameaddbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\searchforgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -67,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|c:\\users\\lumen\\onedrive\\desktop\\sp2\\seniorproject\\velocify v1.1\\velocify v1.1\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57092991-1F9C-42BE-AE66-89E49E15624B}|Velocify v1.1\\Velocify v1.1.csproj|solutionrelative:velocify v1.1\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -87,14 +91,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GameData.cs",
-              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameData.cs",
-              "RelativeDocumentMoniker": "Velocify v1.1\\GameData.cs",
-              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameData.cs",
-              "RelativeToolTip": "Velocify v1.1\\GameData.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAVlU9wBMAAAAFAAAAAAAAAA==",
+              "Title": "GamePanel.cs",
+              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanel.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\GamePanel.cs",
+              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanel.cs",
+              "RelativeToolTip": "Velocify v1.1\\GamePanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:43:18.426Z",
+              "WhenOpened": "2024-10-07T00:59:38.839Z",
               "EditorCaption": ""
             },
             {
@@ -105,7 +109,7 @@
               "RelativeDocumentMoniker": "Velocify v1.1\\SearchForGames.Designer.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.Designer.cs",
               "RelativeToolTip": "Velocify v1.1\\SearchForGames.Designer.cs",
-              "ViewState": "AgIAADEAAAAAAAAhAw0LwEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAEgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T21:20:43.497Z",
               "EditorCaption": ""
@@ -118,53 +122,66 @@
               "RelativeDocumentMoniker": "Velocify v1.1\\SearchForGames.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs",
               "RelativeToolTip": "Velocify v1.1\\SearchForGames.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAADYAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAMC3Piw3wFQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T20:57:30.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GamSelection.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamSelection.Designer.cs",
-              "RelativeDocumentMoniker": "Velocify v1.1\\GamSelection.Designer.cs",
-              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamSelection.Designer.cs",
-              "RelativeToolTip": "Velocify v1.1\\GamSelection.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\Form1.cs",
+              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
+              "RelativeToolTip": "Velocify v1.1\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T00:28:59.801Z",
+              "WhenOpened": "2024-09-08T21:03:53.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "APIFile.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APIFile.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\APIFile.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APIFile.cs",
               "RelativeToolTip": "Velocify v1.1\\APIFile.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAIC1kb84wGoAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T05:28:08.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "GameAddButton.Designer.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.Designer.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\GameAddButton.Designer.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.Designer.cs",
               "RelativeToolTip": "Velocify v1.1\\GameAddButton.Designer.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T03:41:09.725Z",
+              "WhenOpened": "2024-10-07T01:25:56.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "GameData.cs",
+              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameData.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\GameData.cs",
+              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameData.cs",
+              "RelativeToolTip": "Velocify v1.1\\GameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T21:43:18.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GameAddButton.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\GameAddButton.cs",
@@ -177,31 +194,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
+              "Title": "GamePanel.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanel.cs",
+              "RelativeDocumentMoniker": "Velocify v1.1\\GamePanel.cs",
+              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamePanel.cs [Design]",
+              "RelativeToolTip": "Velocify v1.1\\GamePanel.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T00:59:27.674Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GameAddButton.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\GameAddButton.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GameAddButton.cs [Design]",
               "RelativeToolTip": "Velocify v1.1\\GameAddButton.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:05:33.75Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-29T21:05:33.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "SearchForGames.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\SearchForGames.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\SearchForGames.cs [Design]",
               "RelativeToolTip": "Velocify v1.1\\SearchForGames.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T20:56:08.733Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-29T20:56:08.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\DatabaseHelper.cs",
@@ -209,12 +236,11 @@
               "RelativeToolTip": "Velocify v1.1\\DatabaseHelper.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T03:11:54.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T03:11:54.419Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "APITestForm.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APITestForm.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\APITestForm.cs",
@@ -227,19 +253,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "APITestForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APITestForm.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\APITestForm.cs",
               "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\APITestForm.cs [Design]",
               "RelativeToolTip": "Velocify v1.1\\APITestForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T05:38:37.644Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T05:38:37.644Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "GamSelection.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\GamSelection.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\GamSelection.cs",
@@ -247,12 +272,11 @@
               "RelativeToolTip": "Velocify v1.1\\GamSelection.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAA6wBQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T00:30:09.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T00:30:09.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Program.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\Program.cs",
@@ -264,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\LoginForm.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\LoginForm.cs",
@@ -278,19 +302,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
-              "RelativeDocumentMoniker": "Velocify v1.1\\Form1.cs",
-              "ToolTip": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Form1.cs",
-              "RelativeToolTip": "Velocify v1.1\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T21:03:53.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\LoginForm.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\LoginForm.cs",
@@ -301,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "UserInfo.cs",
               "DocumentMoniker": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\UserInfo.cs",
               "RelativeDocumentMoniker": "Velocify v1.1\\UserInfo.cs",

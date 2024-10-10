@@ -97,35 +97,73 @@ namespace Velocify_v1._1
             // }
 
             // For demonstration, let's add some dummy data
-            games.Add(new GameData { id = 1, name = "Fortnite", coverUrl = "url_to_cover" });
-            games.Add(new GameData { id = 2, name = "Minecraft", coverUrl = "url_to_cover" });
-            // Add more games as needed
+            //games.Add(new GameData { id = 1, name = "Fortnite", coverUrl = "url_to_cover" });
+            //games.Add(new GameData { id = 2, name = "Minecraft", coverUrl = "url_to_cover" });
+            //// Add more games as needed
 
             return games;
         }
 
-        public static async Task<List<GameData>> GetGamesByNameAsync(string gameName)
+        public static async Task<List<GameData>> GetGamesByNameAndGenreAsync(string gameName, string genre)
         {
             List<GameData> games = new List<GameData>();
 
-            // Replace this with your actual API URL and request logic
-            string url = $"https://api.igdb.com/v4/games"; // Your IGDB API endpoint for searching games
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("Client-ID", clientId); // Your IGDB Client ID
-                client.DefaultRequestHeaders.Add("Authorization", accessToken); // Your IGDB Access Token
+                // Set up headers for the request
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("Client-ID", clientId);
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
 
-                var content = new StringContent($"search \"{gameName}\"; fields name, id, cover.url;", Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(url, content);
+                // Build the query with conditional logic for game name and genre
+                var query = new StringBuilder();
+
+                // Add the search for the game name, if provided
+                if (!string.IsNullOrEmpty(gameName))
+                {
+                    query.Append($"search \"{gameName}\";");
+                }
+
+                // Add the filter for the genre, if provided
+                if (!string.IsNullOrEmpty(genre))
+                {
+                    // Assuming IGDB uses a 'where' clause for genre filtering
+                    query.Append($" where genres.name = \"{genre}\";");
+                }
+
+                // Select the fields you want from the API
+                query.Append(" fields id,name,cover.url,genres.name; limit 10;");
+
+                var content = new StringContent(query.ToString(), Encoding.Default, "application/json");
+
+                // Make the API request
+                HttpResponseMessage response = await client.PostAsync(baseUrl, content);
+
                 if (response.IsSuccessStatusCode)
                 {
-                    var jsonResponse = await response.Content.ReadAsStringAsync();
-                    games = JsonConvert.DeserializeObject<List<GameData>>(jsonResponse);
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    // Parse the JSON response
+                    JArray data = JArray.Parse(jsonResponse);
+                    if (data.Count > 0)
+                    {
+                        // Loop through the games and extract the relevant data
+                        foreach (var item in data)
+                        {
+                            int id = item["id"].Value<int>();
+                            string name = item["name"].Value<string>();
+                            string coverUrl = item["cover"]?["url"]?.Value<string>() ?? "No URL";
+                            string genreName = item["genres"]?[0]?["name"]?.Value<string>() ?? "Unknown Genre";
+
+                            games.Add(new GameData { id = id, name = name, coverUrl = coverUrl, genre = genreName });
+                        }
+                    }
                 }
             }
 
             return games;
         }
+
 
 
     }

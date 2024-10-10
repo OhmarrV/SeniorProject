@@ -60,7 +60,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(544, 31);
             textBox1.TabIndex = 2;
-            textBox1.Text = "Search for Game Name or IGDB ID";
+            textBox1.Text = "";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 
             // 
