@@ -12,8 +12,9 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\lumen\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\lumen\\.nuget\\packages"
+      "C:\\Users\\omarv\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\omarv\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

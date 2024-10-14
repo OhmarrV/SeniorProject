@@ -28,8 +28,8 @@ namespace Velocify_v1._1
             DatabaseHelper db = new DatabaseHelper();
 
             using (SQLiteDataReader reader = db.GetUserInfo())
-            { 
-                while(reader.Read())
+            {
+                while (reader.Read())
                 {
                     username2 = reader["username"].ToString();
                     password2 = reader["password"].ToString();
@@ -42,29 +42,50 @@ namespace Velocify_v1._1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
+            //Form1 form1 = new Form1();
+            //form1.Show();
+            //this.Hide();
 
-            //if ((username1 == usernameTextBox.Text.ToLower() && password1 == passwordTextBox.Text)||(username2 == usernameTextBox.Text.ToLower() && password2 == passwordTextBox.Text))
-            //{
-            //    currUser = 1;
+            string enteredUsername = usernameTextBox.Text.ToLower();
+            string enteredPassword = passwordTextBox.Text;
 
-            //    MessageBox.Show("LOGIN SUCCESSFUL: \nUser: "+username2+"   Password: "+password2+"   ID: "+currUser2);
-            //    //load form1
-            //    Form1 form1 = new Form1();
-            //    form1.Show();
-            //    this.Hide();
+            DatabaseHelper db = new DatabaseHelper();
+            bool loginSuccess = false;
 
+            using (SQLiteDataReader reader = db.GetUserInfo())
+            {
+                while (reader.Read())
+                {
+                    string dbUsername = reader["username"]?.ToString()?.ToLower();
+                    string dbPassword = reader["password"]?.ToString();
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("LOGIN FAILED");
-            //}
+                    if (dbUsername == enteredUsername && dbPassword == enteredPassword)
+                    {
+                        loginSuccess = true;
+                        currUser2 = Convert.ToInt32(reader["id"]);  // Store current user ID
+                        break;
+                    }
+                }
+            }
+
+            if (loginSuccess)
+            {
+                MessageBox.Show($"LOGIN SUCCESSFUL: \nUser ID: {currUser2}");
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("LOGIN FAILED: Invalid username or password.");
+            }
         }
 
-
-
+        private void registerLabel_Click(object sender, EventArgs e)
+        {
+            // Open the registration form
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();  // Show the registration form as a modal dialog
+        }
     }
 }

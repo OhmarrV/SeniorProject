@@ -35,6 +35,7 @@
             usernameTextBox = new TextBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
+            registerLabel = new Label();
             loginPanel.SuspendLayout();
             userInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,6 +60,7 @@
             userInfoPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             userInfoPanel.BackColor = SystemColors.Highlight;
             userInfoPanel.BorderStyle = BorderStyle.Fixed3D;
+            userInfoPanel.Controls.Add(registerLabel);
             userInfoPanel.Controls.Add(loginButton);
             userInfoPanel.Controls.Add(passwordTextBox);
             userInfoPanel.Controls.Add(usernameTextBox);
@@ -116,6 +118,19 @@
             label1.Text = "VELOCIFY";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // registerLabel
+            // 
+            registerLabel.AutoSize = true;
+            registerLabel.Cursor = Cursors.Hand;
+            registerLabel.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            registerLabel.ForeColor = Color.WhiteSmoke;
+            registerLabel.Location = new Point(111, 181);
+            registerLabel.Name = "registerLabel";
+            registerLabel.Size = new Size(49, 15);
+            registerLabel.TabIndex = 3;
+            registerLabel.Text = "Register";
+            registerLabel.Click += registerLabel_Click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,5 +159,6 @@
         private TextBox usernameTextBox;
         private PictureBox pictureBox1;
         private Label label1;
+        private Label registerLabel;
     }
 }
