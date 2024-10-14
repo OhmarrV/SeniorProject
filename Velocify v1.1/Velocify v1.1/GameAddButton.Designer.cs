@@ -67,15 +67,11 @@
 
         public void addGameBtn_Click(object sender, EventArgs e)
         {
-            //replace the GameAddButton with the GamePanel
-            //UserControl GameSelection = new GameSelection();
-            //this.Parent.Controls.Add(GameSelection);
-            //this.Parent.Controls.Remove(this);
-            SearchForGames searchForm = new SearchForGames();
-
+            // Pass the owner (main form) to the SearchForGames constructor
+            SearchForGames searchForm = new SearchForGames((Form1)this.ParentForm);
             searchForm.ShowDialog();
-            //MessageBox.Show("Game Added! ");
         }
+
 
         #endregion
 
