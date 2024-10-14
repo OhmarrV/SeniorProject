@@ -20,7 +20,9 @@ namespace Velocify_v1._1
         // Base URL for IGDB API
         private static readonly string baseUrl = "https://api.igdb.com/v4/games";
 
-        // Method to fetch game data
+        public static string ClientId => clientId;
+        public static string AccessToken => accessToken;
+
         public static async Task<(int id, string name, string coverUrl)> GetGameDataAsync(string gameName)
         {
             using (HttpClient client = new HttpClient())
@@ -53,9 +55,10 @@ namespace Velocify_v1._1
                 }
                 return (0, "Error", "Error");
             }
-
         }
 
+        // Method to fetch game data
+        
         // Method to fetch game data by ID
         public static async Task<string> GetGameByIdAsync(int gameId)
         {
@@ -82,26 +85,36 @@ namespace Velocify_v1._1
             }
         }
 
-        public static async Task<List<GameData>> GetAllGamesAsync()
+        public static async Task<List<GameData>> GetAllGamesAsync(string clientId, string accessToken)
         {
-            List<GameData> games = new List<GameData>();
-            // Fetch the game data from your API or database
-            // Here, I'm providing a dummy implementation, replace it with actual logic
+            var gameList = new List<GameData>();
 
-            // Example: Making an API call or database query
-            // var response = await httpClient.GetAsync("your_api_endpoint");
-            // if (response.IsSuccessStatusCode)
-            // {
-            //     var content = await response.Content.ReadAsStringAsync();
-            //     games = JsonConvert.DeserializeObject<List<GameData>>(content);
-            // }
+            using (HttpClient client = new HttpClient())
+            {
+                // Set the required headers for IGDB API
+                client.DefaultRequestHeaders.Add("Client-ID", clientId);
+                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
 
-            // For demonstration, let's add some dummy data
-            //games.Add(new GameData { id = 1, name = "Fortnite", coverUrl = "url_to_cover" });
-            //games.Add(new GameData { id = 2, name = "Minecraft", coverUrl = "url_to_cover" });
-            //// Add more games as needed
+                // Example endpoint for fetching games (you may need to change this)
+                var response = await client.GetStringAsync("https://api.igdb.com/v4/games");
 
-            return games;
+                // Parse the JSON response
+                var jsonData = JArray.Parse(response);
+
+                foreach (var item in jsonData)
+                {
+                    var game = new GameData
+                    {
+                        id = item["id"].Value<int>(), // Assuming ID is of type int
+                        name = item["name"]?.ToString(), // Safely get name
+                        coverUrl = item["cover"]?["url"]?.ToString(), // Adjust based on the API response structure
+                        genre = item["genres"]?.First?.ToString() // Assuming genres is an array, take the first genre as an example
+                    };
+                    gameList.Add(game);
+                }
+            }
+
+            return gameList; // Return the list of games
         }
 
         public static async Task<List<GameData>> GetGamesByNameAndGenreAsync(string gameName, string genre)
@@ -128,11 +141,11 @@ namespace Velocify_v1._1
                 if (!string.IsNullOrEmpty(genre))
                 {
                     // Assuming IGDB uses a 'where' clause for genre filtering
-                    query.Append($" where genres.name = \"{genre}\";");
+                    query.Append($" where genres = ({genre});");
                 }
 
                 // Select the fields you want from the API
-                query.Append(" fields id,name,cover.url,genres.name; limit 10;");
+                query.Append(" fields id,name,cover.url,genres; limit 10;");
 
                 var content = new StringContent(query.ToString(), Encoding.Default, "application/json");
 
@@ -153,18 +166,16 @@ namespace Velocify_v1._1
                             int id = item["id"].Value<int>();
                             string name = item["name"].Value<string>();
                             string coverUrl = item["cover"]?["url"]?.Value<string>() ?? "No URL";
-                            string genreName = item["genres"]?[0]?["name"]?.Value<string>() ?? "Unknown Genre";
+                            string genreName = item["genres"]?[0]?.ToString() ?? "Unknown Genre";
 
                             games.Add(new GameData { id = id, name = name, coverUrl = coverUrl, genre = genreName });
                         }
                     }
                 }
+
+                return games;
             }
-
-            return games;
         }
-
-
 
     }
 }

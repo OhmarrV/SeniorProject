@@ -79,8 +79,8 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Label labelGame;
+        public PictureBox pictureBox1;
+        public Label labelGame;
         private Button button1;
     }
 }

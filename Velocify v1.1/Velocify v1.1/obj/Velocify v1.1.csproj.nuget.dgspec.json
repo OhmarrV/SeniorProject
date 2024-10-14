@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {}
+    "C:\\Users\\lumen\\OneDrive\\Desktop\\SP\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {
+    "C:\\Users\\lumen\\OneDrive\\Desktop\\SP\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+        "projectUniqueName": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
         "projectName": "Velocify v1.1",
-        "projectPath": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+        "projectPath": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
         "packagesPath": "C:\\Users\\lumen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP2\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
+        "outputPath": "C:\\Users\\lumen\\OneDrive\\Desktop\\SP\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lumen\\AppData\\Roaming\\NuGet\\NuGet.Config",
