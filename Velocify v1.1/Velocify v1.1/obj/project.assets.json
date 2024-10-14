@@ -4103,24 +4103,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omarv\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\acant\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\Lucas Branch\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+      "projectUniqueName": "C:\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
       "projectName": "Velocify v1.1",
-      "projectPath": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\Lucas Branch\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
-      "packagesPath": "C:\\Users\\omarv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\Lucas Branch\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
+      "projectPath": "C:\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+      "packagesPath": "C:\\Users\\acant\\.nuget\\packages\\",
+      "outputPath": "C:\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\omarv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\acant\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4183,7 +4178,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

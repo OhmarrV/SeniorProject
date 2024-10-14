@@ -13,8 +13,8 @@ namespace Velocify_v1._1
 {
     public partial class LoginForm : Form
     {
-        private string username1 = "user1";
-        private string password1 = "Pass1";
+        private DatabaseHandler dbHandler;
+        private int currUserId;  // Store the current user's ID
 
         private string username2;
         private string password2;
@@ -24,63 +24,70 @@ namespace Velocify_v1._1
         public LoginForm()
         {
             InitializeComponent();
-
-            DatabaseHelper db = new DatabaseHelper();
-
-            using (SQLiteDataReader reader = db.GetUserInfo())
-            {
-                while (reader.Read())
-                {
-                    username2 = reader["username"].ToString();
-                    password2 = reader["password"].ToString();
-                    currUser2 = Convert.ToInt32(reader["id"]);
-                }
-
-            }
-
+            dbHandler = new DatabaseHandler("VelocifyUsers.db"); // Path to your SQLite database file
         }
 
+        // Login button click event
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //Form1 form1 = new Form1();
-            //form1.Show();
-            //this.Hide();
-
-            string enteredUsername = usernameTextBox.Text.ToLower();
-            string enteredPassword = passwordTextBox.Text;
-
-            DatabaseHelper db = new DatabaseHelper();
-            bool loginSuccess = false;
-
-            using (SQLiteDataReader reader = db.GetUserInfo())
+            try
             {
-                while (reader.Read())
-                {
-                    string dbUsername = reader["username"]?.ToString()?.ToLower();
-                    string dbPassword = reader["password"]?.ToString();
+                string enteredUsername = usernameTextBox.Text.ToLower();
+                string enteredPassword = passwordTextBox.Text;
 
-                    if (dbUsername == enteredUsername && dbPassword == enteredPassword)
-                    {
-                        loginSuccess = true;
-                        currUser2 = Convert.ToInt32(reader["id"]);  // Store current user ID
-                        break;
-                    }
+                // Check for empty fields
+                if (string.IsNullOrEmpty(enteredUsername) || string.IsNullOrEmpty(enteredPassword))
+                {
+                    MessageBox.Show("Please enter both username and password.");
+                    return;
+                }
+
+                Console.WriteLine($"Login attempt with Username: {enteredUsername}");
+
+                // Authenticate the user
+                int? userId = dbHandler.AuthenticateUser(enteredUsername, enteredPassword);
+
+                if (userId.HasValue)
+                {
+                    currUserId = userId.Value;  // Store the current user's ID
+                    MessageBox.Show($"LOGIN SUCCESSFUL: \nUser ID: {currUserId}");
+
+                    // Load the user's games
+                    List<string> userGames = dbHandler.GetUserGames(currUserId);
+
+                    // Pass the user games to the next form (Form1 in this case)
+                    Form1 form1 = new Form1(userGames, currUserId);
+                    form1.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("LOGIN FAILED: Invalid username or password.");
                 }
             }
-
-            if (loginSuccess)
+            catch (Exception ex)
             {
-                MessageBox.Show($"LOGIN SUCCESSFUL: \nUser ID: {currUser2}");
-                Form1 form1 = new Form1();
-                form1.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("LOGIN FAILED: Invalid username or password.");
+                // Handle any errors that might occur
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
+        // Add user button click event for testing purposes
+        private void addUserButton_Click(object sender, EventArgs e)
+        {
+            string newUsername = usernameTextBox.Text.ToLower();  // Get the new username from the textbox
+            string newPassword = passwordTextBox.Text;  // Get the new password from the textbox
+
+            // Add a new user
+            dbHandler.AddUser(newUsername, newPassword);
+
+            // Print all users for debugging
+            dbHandler.PrintAllUsers();
+
+            MessageBox.Show("New user added and users printed to console.");
+        }
+
+        // Register label click event
         private void registerLabel_Click(object sender, EventArgs e)
         {
             // Open the registration form
