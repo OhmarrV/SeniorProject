@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Velocify_v1._1;
 
 namespace Velocify_v1._1
 {
@@ -42,7 +43,7 @@ namespace Velocify_v1._1
             txtGameData.Clear();
 
             // Get the game ID from a TextBox or set it directly
-            int gameId = 125174;
+            string gameId = "125174";
             //if (!int.TryParse(txtGameData.Text, out gameId))
             //{
             //    txtGameData.Text = "Please enter a valid game ID.";
@@ -65,6 +66,16 @@ namespace Velocify_v1._1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            List<string> gamesAPI = new List<string> { "dog", "cat" };
+            int userIdAPI = 0;
+
+            Form1 mainForm = new Form1(gamesAPI, userIdAPI);
+            mainForm.Show();
+            this.Hide();
         }
     }
 }

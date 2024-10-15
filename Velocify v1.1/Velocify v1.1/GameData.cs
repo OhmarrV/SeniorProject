@@ -8,14 +8,14 @@ namespace Velocify_v1._1
 {
     internal class GameData
     {
-            public int id { get; set; }
-            public string name { get; set; }
-            public string coverUrl { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string coverUrl { get; set; }
+        public string genre { get; set; }
+
+        public override string ToString() => name;
 
     }
 
-    public class Cover
-    {
-        public string url { get; set; }
-    }
+    
 }

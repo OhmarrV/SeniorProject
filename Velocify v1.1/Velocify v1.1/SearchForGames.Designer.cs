@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             addBtn = new Button();
-            button2 = new Button();
             textBox1 = new TextBox();
             gamesListBox = new ListBox();
             SuspendLayout();
@@ -45,18 +44,6 @@
             addBtn.Text = "Add";
             addBtn.UseVisualStyleBackColor = true;
             addBtn.Click += addBtn_Click;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Location = new Point(236, 238);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(78, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Search";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // textBox1
             // 
@@ -84,7 +71,6 @@
             ClientSize = new Size(403, 270);
             Controls.Add(gamesListBox);
             Controls.Add(textBox1);
-            Controls.Add(button2);
             Controls.Add(addBtn);
             Margin = new Padding(2);
             MaximumSize = new Size(419, 309);
@@ -99,7 +85,6 @@
         #endregion
 
         private Button addBtn;
-        private Button button2;
         private TextBox textBox1;
         private ListBox gamesListBox;
     }

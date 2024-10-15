@@ -28,58 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
+            pictureBoxGame = new PictureBox();
             labelGame = new Label();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGame).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxGame
             // 
-            pictureBox1.BackColor = Color.Orange;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(194, 209);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pictureBoxGame.BackColor = Color.Orange;
+            pictureBoxGame.Location = new Point(3, 4);
+            pictureBoxGame.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxGame.Name = "pictureBoxGame";
+            pictureBoxGame.Size = new Size(222, 279);
+            pictureBoxGame.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxGame.TabIndex = 0;
+            pictureBoxGame.TabStop = false;
+            pictureBoxGame.Click += pictureBoxGame_Click;
             // 
             // labelGame
             // 
             labelGame.AutoEllipsis = true;
             labelGame.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelGame.Location = new Point(0, 212);
+            labelGame.Location = new Point(0, 283);
             labelGame.Name = "labelGame";
-            labelGame.Size = new Size(145, 42);
+            labelGame.Size = new Size(166, 56);
             labelGame.TabIndex = 1;
             labelGame.Text = "Game Name";
             labelGame.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            button1.Location = new Point(140, 224);
+            button1.Location = new Point(160, 299);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(57, 23);
+            button1.Size = new Size(65, 31);
             button1.TabIndex = 2;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // GamePanel
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.IndianRed;
             Controls.Add(button1);
             Controls.Add(labelGame);
-            Controls.Add(pictureBox1);
+            Controls.Add(pictureBoxGame);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "GamePanel";
-            Size = new Size(200, 250);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Size = new Size(229, 333);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGame).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pictureBoxGame;
         private Label labelGame;
         private Button button1;
     }

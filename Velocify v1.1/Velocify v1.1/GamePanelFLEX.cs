@@ -16,5 +16,10 @@ namespace Velocify_v1._1
         {
             InitializeComponent();
         }
+
+        private void gameAddButton1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

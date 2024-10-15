@@ -72,15 +72,28 @@
 
             if (DialogResult.OK == searchForm.ShowDialog())
             {
-                gameAdded();                
+                string gameName = searchForm.SelectedGameName;
+                string gameImg = searchForm.SelectedGameImg;
+
+                gameAdded(gameName, gameImg);                
             }
         }
 
-        private void gameAdded() //Working on passing in game information. Will be stored in the game added panel
+        private void gameAdded(string gName, string gImg) //Working on passing in game information. Will be stored in the game added panel
         {
             //    //replace the GameAddButton with the GamePanel
             UserControl gamePanel = new GamePanel();
             UserControl addNewGame = new GameAddButton();
+
+            //change the labelGame text to the selected game
+            gamePanel.Controls["labelGame"].Text = gName;
+
+            //gamePanel.Controls["pictureBoxGame"].Load(gImg);
+
+            PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
+            pictureBoxGame.LoadAsync("https:" + gImg);
+            //gamePanel.Controls["pictureBoxGame"].Load(gImg);
+
             this.Parent.Controls.Add(gamePanel);
             this.Parent.Controls.Add(addNewGame);
             this.Parent.Controls.Remove(this);

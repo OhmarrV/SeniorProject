@@ -5,7 +5,7 @@ namespace Velocify_v1._1
 {
     internal class DatabaseHelper 
     {
-        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\Merged Branch\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
+        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
                                                                                                                                                                            // Method to get a new SQLite connection
         public SQLiteConnection GetConnection()
         {

@@ -167,3 +167,49 @@ C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\Merged Branch\SeniorProject\
 C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\Merged Branch\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.pdb
 C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\Merged Branch\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.genruntimeconfig.cache
 C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\Merged Branch\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\ref\Velocify v1.1.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\Velocify v1.1.exe
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\Velocify v1.1.deps.json
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\Velocify v1.1.runtimeconfig.json
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\Velocify v1.1.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\Velocify v1.1.pdb
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\EntityFramework.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\System.Data.SQLite.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.csproj.AssemblyReference.cache
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.APITestForm.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.Form1.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.GameAddButton.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.GamePanel.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.GamePanelFLEX.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.GameSelection.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.LoginForm.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.MainPanel.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.NetworkPanelFLEX.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.Properties.Resources.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.RegisterForm.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.SearchForGames.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.UserInfo.resources
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.csproj.GenerateResource.cache
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.AssemblyInfoInputs.cache
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.AssemblyInfo.cs
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.csproj.CoreCompileInputs.cache
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.sourcelink.json
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify.6F62EEAC.Up2Date
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\refint\Velocify v1.1.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.pdb
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.genruntimeconfig.cache
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\FIXING BRANCH\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\ref\Velocify v1.1.dll

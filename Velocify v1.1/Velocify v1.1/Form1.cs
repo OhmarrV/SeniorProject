@@ -1,17 +1,24 @@
+using Microsoft.VisualBasic.ApplicationServices;
+
 namespace Velocify_v1._1
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private List<string> userGames;
+        private int userId;
+        public Form1(List<string> games, int userId)
         {
             InitializeComponent();
-            
+
             mainPanel.Controls.Clear();
             GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
             gamePanelFlex.Dock = DockStyle.Fill;
             gamePanelFlex.Show();
             mainPanel.Controls.Add(gamePanelFlex);
-            
+
+            this.userGames = games;  // Store the list of games
+            this.userId = userId;    // Store the current user's ID
+
         }
 
 

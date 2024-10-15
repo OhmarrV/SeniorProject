@@ -20,7 +20,9 @@ namespace Velocify_v1._1
         // Base URL for IGDB API
         private static readonly string baseUrl = "https://api.igdb.com/v4/games";
 
-        // Method to fetch game data
+        public static string ClientId => clientId;
+        public static string AccessToken => accessToken;
+
         public static async Task<(int id, string name, string coverUrl)> GetGameDataAsync(string gameName)
         {
             using (HttpClient client = new HttpClient())
@@ -53,11 +55,12 @@ namespace Velocify_v1._1
                 }
                 return (0, "Error", "Error");
             }
-
         }
 
+        // Method to fetch game data
+
         // Method to fetch game data by ID
-        public static async Task<string> GetGameByIdAsync(int gameId)
+        public static async Task<string> GetGameByIdAsync(string gameId)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -82,50 +85,98 @@ namespace Velocify_v1._1
             }
         }
 
-        public static async Task<List<GameData>> GetAllGamesAsync()
+        public static async Task<List<GameData>> GetAllGamesAsync(string clientId, string accessToken)
         {
-            List<GameData> games = new List<GameData>();
-            // Fetch the game data from your API or database
-            // Here, I'm providing a dummy implementation, replace it with actual logic
+            var gameList = new List<GameData>();
 
-            // Example: Making an API call or database query
-            // var response = await httpClient.GetAsync("your_api_endpoint");
-            // if (response.IsSuccessStatusCode)
-            // {
-            //     var content = await response.Content.ReadAsStringAsync();
-            //     games = JsonConvert.DeserializeObject<List<GameData>>(content);
-            // }
-
-            // For demonstration, let's add some dummy data
-            games.Add(new GameData { id = 1, name = "Fortnite", coverUrl = "url_to_cover" });
-            games.Add(new GameData { id = 2, name = "Minecraft", coverUrl = "url_to_cover" });
-            // Add more games as needed
-
-            return games;
-        }
-
-        public static async Task<List<GameData>> GetGamesByNameAsync(string gameName)
-        {
-            List<GameData> games = new List<GameData>();
-
-            // Replace this with your actual API URL and request logic
-            string url = $"https://api.igdb.com/v4/games"; // Your IGDB API endpoint for searching games
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("Client-ID", clientId); // Your IGDB Client ID
-                client.DefaultRequestHeaders.Add("Authorization", accessToken); // Your IGDB Access Token
+                // Set the required headers for IGDB API
+                client.DefaultRequestHeaders.Add("Client-ID", clientId);
+                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
 
-                var content = new StringContent($"search \"{gameName}\"; fields name, id, cover.url;", Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(url, content);
-                if (response.IsSuccessStatusCode)
+                // Example endpoint for fetching games (you may need to change this)
+                var response = await client.GetStringAsync("https://api.igdb.com/v4/games");
+
+                // Parse the JSON response
+                var jsonData = JArray.Parse(response);
+
+                foreach (var item in jsonData)
                 {
-                    var jsonResponse = await response.Content.ReadAsStringAsync();
-                    games = JsonConvert.DeserializeObject<List<GameData>>(jsonResponse);
+                    var game = new GameData
+                    {
+                        id = item["id"].Value<int>(), // Assuming ID is of type int
+                        name = item["name"]?.ToString(), // Safely get name
+                        coverUrl = item["cover"]?["url"]?.ToString(), // Adjust based on the API response structure
+                        genre = item["genres"]?.First?.ToString() // Assuming genres is an array, take the first genre as an example
+                    };
+                    gameList.Add(game);
                 }
             }
 
-            return games;
+            return gameList; // Return the list of games
         }
+
+        public static async Task<List<GameData>> GetGamesByNameAndGenreAsync(string gameName, string genre = "")
+        {
+            List<GameData> games = new List<GameData>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                // Set up headers for the request
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("Client-ID", clientId);
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+
+                // Build the query with conditional logic for game name and genre
+                var query = new StringBuilder();
+
+                // Add the search for the game name, if provided
+                if (!string.IsNullOrEmpty(gameName))
+                {
+                    query.Append($"search \"{gameName}\";");
+                }
+
+                // Add the filter for the genre, if provided
+                if (!string.IsNullOrEmpty(genre))
+                {
+                    // Assuming IGDB uses a 'where' clause for genre filtering
+                    query.Append($" where genres = ({genre});");
+                }
+
+                // Select the fields you want from the API
+                query.Append(" fields id,name,cover.url,genres; limit 10;");
+
+                var content = new StringContent(query.ToString(), Encoding.Default, "application/json");
+
+                // Make the API request
+                HttpResponseMessage response = await client.PostAsync(baseUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    // Parse the JSON response
+                    JArray data = JArray.Parse(jsonResponse);
+                    if (data.Count > 0)
+                    {
+                        // Loop through the games and extract the relevant data
+                        foreach (var item in data)
+                        {
+                            int id = item["id"].Value<int>();
+                            string name = item["name"].Value<string>();
+                            string coverUrl = item["cover"]?["url"]?.Value<string>() ?? "No URL";
+                            string genreName = item["genres"]?[0]?.ToString() ?? "Unknown Genre";
+
+                            games.Add(new GameData { id = id, name = name, coverUrl = coverUrl, genre = genreName });
+                        }
+                    }
+                }
+
+                return games;
+            }
+        }
+
 
 
     }

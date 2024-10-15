@@ -31,6 +31,7 @@
             apiButton = new Button();
             txtGameData = new TextBox();
             pictureBox1 = new PictureBox();
+            backBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -65,11 +66,22 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // backBtn
+            // 
+            backBtn.Location = new Point(41, 500);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(94, 29);
+            backBtn.TabIndex = 3;
+            backBtn.Text = "back";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
+            // 
             // APITestForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(backBtn);
             Controls.Add(pictureBox1);
             Controls.Add(txtGameData);
             Controls.Add(apiButton);
@@ -87,5 +99,6 @@
         private Button apiButton;
         private TextBox txtGameData;
         private PictureBox pictureBox1;
+        private Button backBtn;
     }
 }
