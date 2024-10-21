@@ -81,7 +81,7 @@
         }
 
 
-        public string gamePanelId { get; set; }
+        public static string gamePanelId { get; set; }
         private void gameAdded(string gName, string gImg, string gId) //Working on passing in game information. Will be stored in the game added panel
         {
             //    //replace the GameAddButton with the GamePanel
@@ -91,8 +91,8 @@
             //change the labelGame text to the selected game
             gamePanel.Controls["labelGame"].Text = gName;
 
-            //gamePanel.Controls["settingsBtn"].Tag = gId;
             gamePanelId = gId;
+            MessageBox.Show("ADDBtn ID: " + gamePanelId);
 
             PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
             pictureBoxGame.LoadAsync("https:" + gImg);
@@ -102,7 +102,8 @@
             this.Parent.Controls.Add(addNewGame);
             this.Parent.Controls.Remove(this);
 
-            //MessageBox.Show("Game Added! DEBUG HERE " + gamePanel.Controls["settingsBtn"].Tag);
+
+            
         }
 
         #endregion

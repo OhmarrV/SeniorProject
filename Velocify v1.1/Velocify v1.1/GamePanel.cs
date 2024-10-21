@@ -21,16 +21,14 @@ namespace Velocify_v1._1
         private void pictureBoxGame_Click(object sender, EventArgs e)
         {
             UserControl gamePanel = new GamePanel();
-            //string gId = gamePanel.Controls["settingsBtn"].Tag as string; //WORKING HERE 10/16 NOT WORKING
             SearchForGames searchForm = new SearchForGames();
-            string gId = searchForm.SelectedGameId;
-            MessageBox.Show("ID: " + gId);
-
-            //MessageBox.Show("Gamezzz ID: " + gId);
+            
+            string gId = GameAddButton.gamePanelId;
+            MessageBox.Show("GamePanel ID: " + gId);
 
             Form1 form1 = (Form1)this.FindForm();
 
-            form1.change_Panel();//Pass into change_Panel(GAME_ID) 
+            form1.change_Panel(gId);//Pass into change_Panel(GAME_ID) 
         }
 
         private void button1_Click(object sender, EventArgs e)

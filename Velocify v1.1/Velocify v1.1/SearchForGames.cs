@@ -100,12 +100,13 @@ namespace Velocify_v1._1
                     coverUrl = coverUrl.Replace("t_thumb", "t_cover_big");
                 }
 
-                MessageBox.Show(gameId);
+                //MessageBox.Show(gameId);
 
                 SelectedGameName = gameName;
                 SelectedGameImg = coverUrl;
                 SelectedGameId = gameId;
 
+                
                 //string gameImg = gameDetails[2].Replace("Cover URL: ", "").Trim();
 
                 DialogResult = DialogResult.OK;

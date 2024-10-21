@@ -5,7 +5,7 @@ namespace Velocify_v1._1
 {
     internal class DatabaseHelper 
     {
-        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\new main\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
+        private string connectionString = @"Data Source=C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-20 Branch\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
                                                                                                                                                                            // Method to get a new SQLite connection
         public SQLiteConnection GetConnection()
         {
@@ -48,21 +48,36 @@ namespace Velocify_v1._1
                 return false; // Username already exists
             }
 
-            SQLiteConnection conn = GetConnection();
-            conn.Open();
+            // Hash the password before storing
+            string hashedPassword = HashPassword(password);
 
-            string query = "INSERT INTO UserInfo (username, password) VALUES (@username, @password)";
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "INSERT INTO UserInfo (username, password) VALUES (@username, @password)";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username.ToLower());
+                cmd.Parameters.AddWithValue("@password", hashedPassword);
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
-
-            return true; // User creation successful
+                cmd.ExecuteNonQuery();
+                return true; // User creation successful
+            }
         }
 
-
+        // Hash a password using SHA256
+        public string HashPassword(string password)
+        {
+            using (var sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                var builder = new System.Text.StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
 
 
 
