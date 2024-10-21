@@ -58,7 +58,7 @@ namespace Velocify_v1._1
             gamesListBox.DisplayMember = "name"; // Display the game name
         }
 
-        
+
 
         private async void addBtn_Click(object sender, EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace Velocify_v1._1
             {
                 // Retrieve the selected item
                 string selectedGame = gamesListBox.SelectedItem.ToString();
-                
+
 
 
                 // Split the string into parts based on ", " as the separator
@@ -106,11 +106,11 @@ namespace Velocify_v1._1
                 SelectedGameImg = coverUrl;
                 SelectedGameId = gameId;
 
-                
+
                 //string gameImg = gameDetails[2].Replace("Cover URL: ", "").Trim();
 
                 DialogResult = DialogResult.OK;
-                
+
             }
             else
             {
@@ -161,7 +161,7 @@ namespace Velocify_v1._1
             }
         }
 
-        
+
         public string gameInfo(string NameOfGame)
         {
             string gameName = NameOfGame;
@@ -170,6 +170,5 @@ namespace Velocify_v1._1
         }
 
 
-
-    }
+    }       
 }

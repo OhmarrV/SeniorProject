@@ -21,5 +21,11 @@ namespace Velocify_v1._1
         {
 
         }
+
+        public FlowLayoutPanel GameLibraryPanel
+        {
+            get { return gameLibraryPanel; }
+        }
+
     }
 }

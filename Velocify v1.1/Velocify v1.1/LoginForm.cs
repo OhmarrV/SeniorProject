@@ -53,10 +53,10 @@ namespace Velocify_v1._1
                     MessageBox.Show($"LOGIN SUCCESSFUL: \nUser ID: {currUserId}");
 
                     // Load the user's games
-                    List<string> userGames = dbHandler.GetUserGames(currUserId);
+                    //List<string> userGames = dbHandler.GetUserGames(currUserId);
 
                     // Pass the user games to the next form (Form1 in this case)
-                    Form1 form1 = new Form1(userGames, currUserId); // Form1({"1238538", "1231", 1235523", "342243"}, 0);
+                    Form1 form1 = new Form1(currUserId); // Form1({"1238538", "1231", 1235523", "342243"}, 0);
                     form1.Show();
                     this.Hide();
                 }

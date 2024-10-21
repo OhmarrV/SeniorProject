@@ -70,10 +70,10 @@ namespace Velocify_v1._1
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            List<string> gamesAPI = new List<string> { "dog", "cat" };
-            int userIdAPI = 0;
+            
+            int currUserId = Form1.currUserId;
 
-            Form1 mainForm = new Form1(gamesAPI, userIdAPI);
+            Form1 mainForm = new Form1(currUserId);
             mainForm.Show();
             this.Hide();
         }
