@@ -28,6 +28,9 @@
     <Compile Update="NetworkPanelFLEX.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="OptimizationPanelFLEX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>

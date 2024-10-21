@@ -37,15 +37,6 @@ namespace Velocify_v1._1
             MessageBox.Show(mainPanel.Controls[0].Name);
         }
 
-        private void gameAddButton1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void netButton_Click(object sender, EventArgs e)
         {
@@ -73,6 +64,15 @@ namespace Velocify_v1._1
             APIForm.Show();
             this.Hide();
 
+        }
+
+        public void change_Panel()//PASS IN GAME_ID 
+        {
+            mainPanel.Controls.Clear();
+            OptimizationPanelFlex optiFlex = new OptimizationPanelFlex();
+            optiFlex.Dock = DockStyle.Fill;
+            optiFlex.Show();
+            mainPanel.Controls.Add(optiFlex);
         }
     }
 }

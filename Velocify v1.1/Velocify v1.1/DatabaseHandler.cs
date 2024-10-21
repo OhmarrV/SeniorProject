@@ -12,8 +12,8 @@ public class DatabaseHandler
     public DatabaseHandler(string databasePath)
     {
         // Properly escape the path by using double backslashes 
-        Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\FIXING BRANCH\\SeniorProject\\VelocifyUsers.db\".db");
-        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\FIXING BRANCH\\SeniorProject\\VelocifyUsers.db\";Version=3;");
+        //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
+        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\";Version=3;");
         connection.Open();
     
         // Ensure tables are created

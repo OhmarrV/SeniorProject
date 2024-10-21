@@ -17,6 +17,8 @@ namespace Velocify_v1._1
         private List<GameData> allGames;
         public string SelectedGameName { get; private set; }
         public string SelectedGameImg { get; private set; }
+        public string SelectedGameId { get; private set; }
+
         private Form1 _mainForm;
         public SearchForGames()
         {
@@ -92,15 +94,17 @@ namespace Velocify_v1._1
 
                 // Access the cover URL safely using ?. and Value<string>()
                 string coverUrl = gameDataimg["cover"]?["url"]?.Value<string>() ?? "No URL";
+                string gameId = gameDataimg["id"]?.ToString() ?? "No ID";
                 if (!string.IsNullOrEmpty(coverUrl))
                 {
                     coverUrl = coverUrl.Replace("t_thumb", "t_cover_big");
                 }
 
-                MessageBox.Show(coverUrl);
+                MessageBox.Show(gameId);
 
                 SelectedGameName = gameName;
                 SelectedGameImg = coverUrl;
+                SelectedGameId = gameId;
 
                 //string gameImg = gameDetails[2].Replace("Cover URL: ", "").Trim();
 
