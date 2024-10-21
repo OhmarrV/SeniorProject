@@ -87,8 +87,12 @@ namespace Velocify_v1._1
                 DatabaseHandler dbHandler = new DatabaseHandler("VelocifyUsers.db");
                 dbHandler.AddGameToUser(currUserId, gameId);
             }
-            
+
+
+
         }
+
+        
 
 
         public static string gamePanelId { get; set; }
@@ -107,20 +111,14 @@ namespace Velocify_v1._1
             MessageBox.Show("ADDBtn 111 NAME: " + gName);
             MessageBox.Show("ADDBtn 111 IMG: " + gImg);
 
+
+
             // Load the game image into the PictureBox
             PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
             if (pictureBoxGame != null)
             {
                 pictureBoxGame.LoadAsync("https:" + gImg);
             }
-
-            //// Add the GamePanel and AddNewGame button to the parent container (gameLibraryPanel)
-            //Panel parentPanel = this.Parent as Panel;
-            //parentPanel.Controls.Add(gamePanel);
-            //parentPanel.Controls.Add(addNewGame);
-
-            //// Remove this GameAddButton from the parent (if needed)
-            //this.Parent?.Controls.Remove(this);
 
             gameAdded2(gName, gImg, gId);
         }
@@ -145,50 +143,52 @@ namespace Velocify_v1._1
                 pictureBoxGame.LoadAsync("https:" + gImg);
                 //gamePanel.Controls["pictureBoxGame"].Load(gImg);
 
-                //string parentType = this.Parent.GetType().ToString();
-                //string parentName = this.Parent.Name;
-                //MessageBox.Show("PARENT NAME: " + parentName + "\nPARENT TYPE: " + parentType);
+
 
                 this.Parent.Controls.Add(gamePanel);
                 this.Parent.Controls.Add(addNewGame);
+                MessageBox.Show(this.Name);
                 this.Parent.Controls.Remove(this);
             }
             else
             {
+                
+                UserControl parentPanel = new GamePanelFLEX();
+                //parentPanel.gameAddButton1;
 
-                Form1 parentForm = this.FindForm() as Form1;
-                GamePanelFLEX gamePanelFlex = this.Parent as GamePanelFLEX;
-                //GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
-                //FlowLayoutPanel gameLibraryPanel = gamePanelFlex.Controls["gameLibraryPanel"] as FlowLayoutPanel;
+                //SearchForGames searchForm = new SearchForGames();
 
-                //string parentType = gameLibraryPanel.Parent.GetType().ToString();
-                //string parentName = gameLibraryPanel.Parent.Name;
-                //MessageBox.Show("PARENT NAME: " + parentName + "\nPARENT TYPE: " + parentType);
 
-                // Create the GamePanel and AddNewGame button
-                UserControl gamePanel = new GamePanel();
-                UserControl addNewGame = new GameAddButton();
+                //parentPanel.Controls.Add(this);
+                //this.Name = "gameAddButton1";
 
-                // Change the labelGame text to the selected game
-                gamePanel.Controls["labelGame"].Text = gName;
+                //string gameName = searchForm.SelectedGameName;
+                //string gameImg = searchForm.SelectedGameImg;
+                //string gameId = searchForm.SelectedGameId;
+                //gameAdded2(gameName, gameImg, gameId);
 
-                // Set the gamePanelId to the gameId
-                gamePanelId = gId;
-                MessageBox.Show("ADDBtn ID: " + gamePanelId);
 
-                // Load the game image into the PictureBox
-                PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
-                if (pictureBoxGame != null)
-                {
-                    pictureBoxGame.LoadAsync("https:" + gImg);
-                }
 
-                // Add the GamePanel and AddNewGame button to the gameLibraryPanel
-                //gameLibraryPanel.Controls.Add(gamePanel);
-                //gameLibraryPanel.Controls.Add(addNewGame); 10/21 BROEKN
+                parentPanel.Controls.Add(this);
+                //this.Name = "gameAddButton1";
+                MessageBox.Show(parentPanel.Name);
 
-                // Optionally remove this GameAddButton
-                this.Parent?.Controls.Remove(this);
+                //UserControl gamePanel = new GamePanel();
+                //UserControl addNewGame = new GameAddButton();
+
+                //gamePanel.Controls["labelGame"].Text = gName;
+
+                //gamePanelId = gId;
+                //MessageBox.Show("ADDBtn ID: " + gamePanelId);
+
+
+
+                //PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
+                //pictureBoxGame.LoadAsync("https:" + gImg);
+
+                //this.Parent.Controls.Add(gamePanel);
+                //this.Parent.Controls.Add(addNewGame);
+                //this.Parent.Controls.Remove(this);
 
             }
         }
@@ -216,21 +216,7 @@ namespace Velocify_v1._1
 
         }
 
-        public void LOADaddGameBtn_Click()
-        {
-                SearchForGames searchForm = new SearchForGames();
-
-                string gameName = searchForm.SelectedGameName;
-                string gameImg = searchForm.SelectedGameImg;
-                string gameId = searchForm.SelectedGameId;
-
-
-
-                gameAdded2(gameName, gameImg, gameId);
-            
-
-        }
-
+        
         #endregion
 
         private Button addGameBtn;
