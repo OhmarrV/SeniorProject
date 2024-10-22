@@ -145,51 +145,15 @@ namespace Velocify_v1._1
 
 
 
-                this.Parent.Controls.Add(gamePanel);
+                this.Parent.Controls.Add(gamePanel); //q: why do we add the gamePanel to this.Parent? a: we add the gamePanel to this.Parent to display the gamePanel on the form q: what is this.Parent? a: this.Parent is the parent control of the current control q: what is the parent control of the GameAddButton? a: the parent control of the GameAddButton is the GamePanel q: why do we remove this from the parent controls? a: we remove this from the parent controls to replace the GameAddButton with the GamePanel
                 this.Parent.Controls.Add(addNewGame);
                 MessageBox.Show(this.Name);
-                this.Parent.Controls.Remove(this);
+                this.Parent.Controls.Remove(this); //q: why is this.Parent not null here?
+                //a: this.Parent is not null here because the GameAddButton is a child of the GamePanel
             }
             else
             {
-                
-                UserControl parentPanel = new GamePanelFLEX();
-                //parentPanel.gameAddButton1;
-
-                //SearchForGames searchForm = new SearchForGames();
-
-
-                //parentPanel.Controls.Add(this);
-                //this.Name = "gameAddButton1";
-
-                //string gameName = searchForm.SelectedGameName;
-                //string gameImg = searchForm.SelectedGameImg;
-                //string gameId = searchForm.SelectedGameId;
-                //gameAdded2(gameName, gameImg, gameId);
-
-
-
-                parentPanel.Controls.Add(this);
-                //this.Name = "gameAddButton1";
-                MessageBox.Show(parentPanel.Name);
-
-                //UserControl gamePanel = new GamePanel();
-                //UserControl addNewGame = new GameAddButton();
-
-                //gamePanel.Controls["labelGame"].Text = gName;
-
-                //gamePanelId = gId;
-                //MessageBox.Show("ADDBtn ID: " + gamePanelId);
-
-
-
-                //PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
-                //pictureBoxGame.LoadAsync("https:" + gImg);
-
-                //this.Parent.Controls.Add(gamePanel);
-                //this.Parent.Controls.Add(addNewGame);
-                //this.Parent.Controls.Remove(this);
-
+               
             }
         }
 

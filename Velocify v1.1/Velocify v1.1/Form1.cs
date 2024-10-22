@@ -11,13 +11,14 @@ namespace Velocify_v1._1
         public static int currUserId { get; set; }
 
         public FlowLayoutPanel gameLibraryPanel;
+        GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
 
         public Form1(int userId)
         {
             InitializeComponent();
 
             mainPanel.Controls.Clear();
-            GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
+            
             gamePanelFlex.Dock = DockStyle.Fill;
             gamePanelFlex.Show();
             mainPanel.Controls.Add(gamePanelFlex);
@@ -36,6 +37,8 @@ namespace Velocify_v1._1
             this.Controls.Add(this.gameLibraryPanel);
 
             load_UserGames();
+            //GamePanelFLEX gamePanelFLEX = new GamePanelFLEX();
+            //gamePanelFlex.gameAddBtnLoad();
         }
 
 
@@ -100,7 +103,7 @@ namespace Velocify_v1._1
             // SQL query to get all game IDs for the specified user ID
             string query = "SELECT game_id FROM UserGames WHERE user_id = @userId";
 
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-20 Branch\\SeniorProject\\VelocifyUsers.db;Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-22\\SeniorProject\\VelocifyUsers.db;Version=3;"))
             {
                 conn.Open();
 
@@ -124,8 +127,8 @@ namespace Velocify_v1._1
             foreach (string gameId in gameIds)
             {
                 // Create a new GameAddButton and pass the parent container (gameLibraryPanel)
-                GameAddButton gameAddButton = new GameAddButton();
-                gameAddButton.loadGamesAdded(gameId);  // Pass gameLibraryPanel as parent
+                gamePanelFlex.gameAddBtnLoad(gameId);
+                //gameAddButton.loadGamesAdded(gameId);  // Pass gameLibraryPanel as parent
             }
         }
 

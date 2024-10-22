@@ -1,4 +1,6 @@
-﻿namespace Velocify_v1._1
+﻿using Newtonsoft.Json.Linq;
+
+namespace Velocify_v1._1
 {
     partial class GamePanelFLEX
     {
@@ -71,5 +73,37 @@
 
         private FlowLayoutPanel gameLibraryPanel;
         private GameAddButton gameAddButton1;
+
+        public async void gameAddBtnLoad(string id)
+        {
+            GamePanel gamePanel = new GamePanel();
+
+            var gameDataResponse = await APIFile.GetGameByIdAsync(id);
+            JArray gameDataArray = JArray.Parse(gameDataResponse);
+
+            if (gameDataArray.Count > 0)
+            {
+                // Extract the first game object from the array
+                JObject gameData = (JObject)gameDataArray[0];
+
+                // Extract the game name and image URL from the API response
+                string gName = gameData["name"]?.ToString() ?? "Unknown Game";
+                string gImg = gameData["cover"]?["url"]?.ToString() ?? "No Image";
+
+                gamePanel.Controls["labelGame"].Text = gName;
+                PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
+                if (pictureBoxGame != null)
+                {
+                    pictureBoxGame.LoadAsync("https:" + gImg);
+                }
+            }
+
+            gameLibraryPanel.Controls.Add(gamePanel);
+            gameLibraryPanel.Controls.Remove(gameAddButton1);
+
+            gameLibraryPanel.Controls.Add(gameAddButton1);
+            gameLibraryPanel.ResumeLayout(false);
+
+        }
     }
 }

@@ -9,11 +9,11 @@ public class DatabaseHandler
 {
     private SQLiteConnection connection;
 
-    public DatabaseHandler(string databasePath)
+    public DatabaseHandler(string databasePath) 
     {
         // Properly escape the path by using double backslashes 
         //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
-        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-20 Branch\\SeniorProject\\VelocifyUsers.db\";Version=3;");
+        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-22\\SeniorProject\\VelocifyUsers.db\";Version=3;");
         connection.Open();
 
         // Ensure tables are created
