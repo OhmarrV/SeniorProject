@@ -81,7 +81,7 @@ namespace Velocify_v1._1
 
 
 
-                gameAdded2(gameName, gameImg, gameId);
+                gameAdded(gameName, gameImg, gameId);
 
                 int currUserId = Form1.currUserId;
                 DatabaseHandler dbHandler = new DatabaseHandler("VelocifyUsers.db");
@@ -96,89 +96,29 @@ namespace Velocify_v1._1
 
 
         public static string gamePanelId { get; set; }
-        private void gameAdded1(string gName, string gImg, string gId) //Working on passing in game information. Will be stored in the game added panel
+        private void gameAdded(string gName, string gImg, string gId) //Working on passing in game information. Will be stored in the game added panel
         {
-            // Create the GamePanel and AddNewGame button
+            //    //replace the GameAddButton with the GamePanel
             UserControl gamePanel = new GamePanel();
             UserControl addNewGame = new GameAddButton();
 
-            // Change the labelGame text to the selected game name
+            //change the labelGame text to the selected game
             gamePanel.Controls["labelGame"].Text = gName;
 
-            // Set the gamePanelId to the gameId
             gamePanelId = gId;
-            MessageBox.Show("ADDBtn 111 ID: " + gId);
-            MessageBox.Show("ADDBtn 111 NAME: " + gName);
-            MessageBox.Show("ADDBtn 111 IMG: " + gImg);
 
-
-
-            // Load the game image into the PictureBox
             PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
-            if (pictureBoxGame != null)
+            if (!string.IsNullOrEmpty(gImg))
             {
-                pictureBoxGame.LoadAsync("https:" + gImg);
+                gImg = gImg.Replace("t_thumb", "t_cover_big");
             }
+            pictureBoxGame.LoadAsync("https:" + gImg);
 
-            gameAdded2(gName, gImg, gId);
+            this.Parent.Controls.Add(gamePanel);
+            this.Parent.Controls.Add(addNewGame);
+            this.Parent.Controls.Remove(this); 
         }
 
-        private void gameAdded2(string gName, string gImg, string gId) //Working on passing in game information. Will be stored in the game added panel
-        {
-            if (this.Parent != null)
-            {
-                //    //replace the GameAddButton with the GamePanel
-                UserControl gamePanel = new GamePanel();
-                UserControl addNewGame = new GameAddButton();
-
-                //change the labelGame text to the selected game
-                gamePanel.Controls["labelGame"].Text = gName;
-
-                gamePanelId = gId;
-                MessageBox.Show("ADDBtn ID: " + gamePanelId);
-
-
-
-                PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
-                pictureBoxGame.LoadAsync("https:" + gImg);
-                //gamePanel.Controls["pictureBoxGame"].Load(gImg);
-
-
-
-                this.Parent.Controls.Add(gamePanel); //q: why do we add the gamePanel to this.Parent? a: we add the gamePanel to this.Parent to display the gamePanel on the form q: what is this.Parent? a: this.Parent is the parent control of the current control q: what is the parent control of the GameAddButton? a: the parent control of the GameAddButton is the GamePanel q: why do we remove this from the parent controls? a: we remove this from the parent controls to replace the GameAddButton with the GamePanel
-                this.Parent.Controls.Add(addNewGame);
-                MessageBox.Show(this.Name);
-                this.Parent.Controls.Remove(this); //q: why is this.Parent not null here?
-                //a: this.Parent is not null here because the GameAddButton is a child of the GamePanel
-            }
-            else
-            {
-               
-            }
-        }
-
-
-
-        public async void loadGamesAdded(string gameId) // Use gameId from the database
-        {
-            var gameDataResponse = await APIFile.GetGameByIdAsync(gameId);
-
-            JArray gameDataArray = JArray.Parse(gameDataResponse);
-
-            if (gameDataArray.Count > 0)
-            {
-                // Extract the first game object from the array
-                JObject gameData = (JObject)gameDataArray[0];
-
-                // Extract the game name and image URL from the API response
-                string gName = gameData["name"]?.ToString() ?? "Unknown Game";
-                string gImg = gameData["cover"]?["url"]?.ToString() ?? "No Image";
-
-                // Reuse the gameAdded1 method to update the UI
-                gameAdded1(gName, gImg, gameId);
-            }
-
-        }
 
         
         #endregion

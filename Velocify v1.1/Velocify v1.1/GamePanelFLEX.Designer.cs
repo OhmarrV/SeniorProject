@@ -92,10 +92,14 @@ namespace Velocify_v1._1
 
                 gamePanel.Controls["labelGame"].Text = gName;
                 PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
+
                 if (pictureBoxGame != null)
                 {
-                    pictureBoxGame.LoadAsync("https:" + gImg);
+                    gImg = gImg.Replace("t_thumb", "t_cover_big");
+                    pictureBoxGame.Load("https:" + gImg);
                 }
+
+                gamePanel.Controls["settingsBtn"].Tag = id;
             }
 
             gameLibraryPanel.Controls.Add(gamePanel);

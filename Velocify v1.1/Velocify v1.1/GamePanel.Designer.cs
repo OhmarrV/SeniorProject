@@ -54,7 +54,7 @@
             labelGame.ForeColor = SystemColors.ControlLightLight;
             labelGame.Location = new Point(0, 283);
             labelGame.Name = "labelGame";
-            labelGame.Size = new Size(166, 56);
+            labelGame.Size = new Size(166, 50);
             labelGame.TabIndex = 1;
             labelGame.Text = "Game Name";
             labelGame.TextAlign = ContentAlignment.MiddleCenter;

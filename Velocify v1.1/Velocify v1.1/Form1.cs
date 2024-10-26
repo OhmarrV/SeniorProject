@@ -13,6 +13,7 @@ namespace Velocify_v1._1
         public FlowLayoutPanel gameLibraryPanel;
         GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
 
+
         public Form1(int userId)
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace Velocify_v1._1
 
             this.Controls.Add(this.gameLibraryPanel);
 
-            load_UserGames();
+            load_UserGames(userId);
             //GamePanelFLEX gamePanelFLEX = new GamePanelFLEX();
             //gamePanelFlex.gameAddBtnLoad();
         }
@@ -49,7 +50,7 @@ namespace Velocify_v1._1
             {
                 mainPanel.Controls.Clear();
                 //add gamePanelFlex onto panel3
-                GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
+                //GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
                 gamePanelFlex.Dock = DockStyle.Fill;
                 gamePanelFlex.Show();
                 mainPanel.Controls.Add(gamePanelFlex);
@@ -96,7 +97,7 @@ namespace Velocify_v1._1
             mainPanel.Controls.Add(optiFlex);
         }
 
-        private void load_UserGames() 
+        private void load_UserGames(int uId)
         {
             List<string> gameIds = new List<string>();
 
@@ -130,6 +131,7 @@ namespace Velocify_v1._1
                 gamePanelFlex.gameAddBtnLoad(gameId);
                 //gameAddButton.loadGamesAdded(gameId);  // Pass gameLibraryPanel as parent
             }
+
         }
 
 

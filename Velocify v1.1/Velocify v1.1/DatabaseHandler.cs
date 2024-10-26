@@ -9,7 +9,7 @@ public class DatabaseHandler
 {
     private SQLiteConnection connection;
 
-    public DatabaseHandler(string databasePath) 
+    public DatabaseHandler(string databasePath)
     {
         // Properly escape the path by using double backslashes 
         //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
@@ -160,4 +160,6 @@ public class DatabaseHandler
             Console.WriteLine($"Rows affected: {rowsAffected}"); // Logs how many rows were inserted
         }
     }
+
+    
 }
