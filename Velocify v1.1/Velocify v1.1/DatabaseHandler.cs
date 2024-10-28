@@ -9,13 +9,13 @@ public class DatabaseHandler
 {
     private SQLiteConnection connection;
 
-    public DatabaseHandler(string databasePath)
+    public DatabaseHandler(string databasePath = "")
     {
         // Properly escape the path by using double backslashes 
-        Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\FIXING BRANCH\\SeniorProject\\VelocifyUsers.db\".db");
-        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\FIXING BRANCH\\SeniorProject\\VelocifyUsers.db\";Version=3;");
+        //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
+        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-26\\SeniorProject\\VelocifyUsers.db\";Version=3;");
         connection.Open();
-    
+
         // Ensure tables are created
         CreateTables();
     }
@@ -125,15 +125,14 @@ public class DatabaseHandler
     }
 
     // Retrieve games associated with the user
-    public List<string> GetUserGames(int userId)
+    public List<string> GetUserGameIds(int userId)
     {
         string query = @"
-            SELECT Games.game_name 
-            FROM Games 
-            JOIN UserGames ON Games.game_id = UserGames.game_id 
-            WHERE UserGames.user_id = @userId";
+        SELECT game_id 
+        FROM UserGames 
+        WHERE user_id = @userId";
 
-        List<string> games = new List<string>();
+        List<string> gameIds = new List<string>();
         using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
         {
             cmd.Parameters.AddWithValue("@userId", userId);
@@ -141,10 +140,49 @@ public class DatabaseHandler
             {
                 while (reader.Read())
                 {
-                    games.Add(reader["game_name"].ToString());
+                    gameIds.Add(reader["game_id"].ToString());
                 }
             }
         }
-        return games;
+        return gameIds;
     }
+
+    public void AddGameToUser(int userId, string gameId)
+    {
+        string query = "INSERT INTO UserGames (user_id, game_id) VALUES (@userId, @gameId)";
+
+        using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+        {
+            cmd.Parameters.AddWithValue("@userId", userId);
+            cmd.Parameters.AddWithValue("@gameId", gameId);
+
+            int rowsAffected = cmd.ExecuteNonQuery();
+            Console.WriteLine($"Rows affected: {rowsAffected}"); // Logs how many rows were inserted
+        }
+    }
+
+    public void DeleteGameFromUser(int userId, string gameId)
+    {
+        // SQL query to delete the game from the user's library
+        string query = "DELETE FROM UserGames WHERE user_id = @userId AND game_id = @gameId";
+
+        using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+        {
+            // Bind the parameters
+            cmd.Parameters.AddWithValue("@userId", userId);
+            cmd.Parameters.AddWithValue("@gameId", gameId);
+
+            // Execute the command
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                Console.WriteLine($"Game {gameId} deleted for user {userId}");
+            }
+            else
+            {
+                Console.WriteLine($"Game {gameId} not found for user {userId}");
+            }
+        }
+    }
+
 }

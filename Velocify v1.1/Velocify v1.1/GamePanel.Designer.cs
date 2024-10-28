@@ -30,17 +30,18 @@
         {
             pictureBoxGame = new PictureBox();
             labelGame = new Label();
-            button1 = new Button();
+            settingsBtn = new Button();
+            adfToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGame).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxGame
             // 
-            pictureBoxGame.BackColor = Color.Orange;
-            pictureBoxGame.Location = new Point(3, 4);
-            pictureBoxGame.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxGame.BackColor = Color.Transparent;
+            pictureBoxGame.Cursor = Cursors.Hand;
+            pictureBoxGame.Location = new Point(12, 3);
             pictureBoxGame.Name = "pictureBoxGame";
-            pictureBoxGame.Size = new Size(222, 279);
+            pictureBoxGame.Size = new Size(174, 211);
             pictureBoxGame.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxGame.TabIndex = 0;
             pictureBoxGame.TabStop = false;
@@ -50,35 +51,40 @@
             // 
             labelGame.AutoEllipsis = true;
             labelGame.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelGame.Location = new Point(0, 283);
+            labelGame.ForeColor = SystemColors.ControlLightLight;
+            labelGame.Location = new Point(0, 215);
             labelGame.Name = "labelGame";
-            labelGame.Size = new Size(166, 56);
+            labelGame.Size = new Size(145, 38);
             labelGame.TabIndex = 1;
             labelGame.Text = "Game Name";
             labelGame.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // settingsBtn
             // 
-            button1.Location = new Point(160, 299);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(65, 31);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            settingsBtn.Location = new Point(140, 223);
+            settingsBtn.Name = "settingsBtn";
+            settingsBtn.Size = new Size(57, 23);
+            settingsBtn.TabIndex = 2;
+            settingsBtn.Text = "settings";
+            settingsBtn.UseVisualStyleBackColor = true;
+            settingsBtn.Click += settingsBtn_Click;
+            // 
+            // adfToolStripMenuItem
+            // 
+            adfToolStripMenuItem.Name = "adfToolStripMenuItem";
+            adfToolStripMenuItem.Size = new Size(180, 22);
+            adfToolStripMenuItem.Text = "adf";
             // 
             // GamePanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.IndianRed;
-            Controls.Add(button1);
+            BackColor = Color.Transparent;
+            Controls.Add(settingsBtn);
             Controls.Add(labelGame);
             Controls.Add(pictureBoxGame);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "GamePanel";
-            Size = new Size(229, 333);
+            Size = new Size(200, 257);
             ((System.ComponentModel.ISupportInitialize)pictureBoxGame).EndInit();
             ResumeLayout(false);
         }
@@ -87,6 +93,7 @@
 
         private PictureBox pictureBoxGame;
         private Label labelGame;
-        private Button button1;
+        private Button settingsBtn;
+        private ToolStripMenuItem adfToolStripMenuItem;
     }
 }

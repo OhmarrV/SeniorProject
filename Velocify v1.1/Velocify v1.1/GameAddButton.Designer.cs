@@ -1,4 +1,7 @@
-﻿namespace Velocify_v1._1
+﻿using Newtonsoft.Json.Linq;
+using System.Xml.Linq;
+
+namespace Velocify_v1._1
 {
     partial class GameAddButton
     {
@@ -74,12 +77,26 @@
             {
                 string gameName = searchForm.SelectedGameName;
                 string gameImg = searchForm.SelectedGameImg;
+                string gameId = searchForm.SelectedGameId;
 
-                gameAdded(gameName, gameImg);                
+
+
+                gameAdded(gameName, gameImg, gameId);
+
+                int currUserId = Form1.currUserId;
+                DatabaseHandler dbHandler = new DatabaseHandler("VelocifyUsers.db");
+                dbHandler.AddGameToUser(currUserId, gameId);
             }
+
+
+
         }
 
-        private void gameAdded(string gName, string gImg) //Working on passing in game information. Will be stored in the game added panel
+        
+
+
+        public static string gamePanelId { get; set; }
+        private void gameAdded(string gName, string gImg, string gId) //Working on passing in game information. Will be stored in the game added panel
         {
             //    //replace the GameAddButton with the GamePanel
             UserControl gamePanel = new GamePanel();
@@ -88,19 +105,22 @@
             //change the labelGame text to the selected game
             gamePanel.Controls["labelGame"].Text = gName;
 
-            //gamePanel.Controls["pictureBoxGame"].Load(gImg);
+            gamePanelId = gId;
 
             PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;
+            if (!string.IsNullOrEmpty(gImg))
+            {
+                gImg = gImg.Replace("t_thumb", "t_cover_big");
+            }
             pictureBoxGame.LoadAsync("https:" + gImg);
-            //gamePanel.Controls["pictureBoxGame"].Load(gImg);
 
             this.Parent.Controls.Add(gamePanel);
             this.Parent.Controls.Add(addNewGame);
-            this.Parent.Controls.Remove(this);
-
-            //MessageBox.Show("Game Added! ");
+            this.Parent.Controls.Remove(this); 
         }
 
+
+        
         #endregion
 
         private Button addGameBtn;

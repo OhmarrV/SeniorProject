@@ -17,6 +17,8 @@ namespace Velocify_v1._1
         private List<GameData> allGames;
         public string SelectedGameName { get; private set; }
         public string SelectedGameImg { get; private set; }
+        public string SelectedGameId { get; private set; }
+
         private Form1 _mainForm;
         public SearchForGames()
         {
@@ -56,7 +58,7 @@ namespace Velocify_v1._1
             gamesListBox.DisplayMember = "name"; // Display the game name
         }
 
-        
+
 
         private async void addBtn_Click(object sender, EventArgs e)
         {
@@ -64,7 +66,7 @@ namespace Velocify_v1._1
             {
                 // Retrieve the selected item
                 string selectedGame = gamesListBox.SelectedItem.ToString();
-                
+
 
 
                 // Split the string into parts based on ", " as the separator
@@ -92,20 +94,23 @@ namespace Velocify_v1._1
 
                 // Access the cover URL safely using ?. and Value<string>()
                 string coverUrl = gameDataimg["cover"]?["url"]?.Value<string>() ?? "No URL";
+                string gameId = gameDataimg["id"]?.ToString() ?? "No ID";
                 if (!string.IsNullOrEmpty(coverUrl))
                 {
                     coverUrl = coverUrl.Replace("t_thumb", "t_cover_big");
                 }
 
-                MessageBox.Show(coverUrl);
+                //MessageBox.Show(gameId);
 
                 SelectedGameName = gameName;
                 SelectedGameImg = coverUrl;
+                SelectedGameId = gameId;
+
 
                 //string gameImg = gameDetails[2].Replace("Cover URL: ", "").Trim();
 
                 DialogResult = DialogResult.OK;
-                
+
             }
             else
             {
@@ -156,7 +161,7 @@ namespace Velocify_v1._1
             }
         }
 
-        
+
         public string gameInfo(string NameOfGame)
         {
             string gameName = NameOfGame;
@@ -164,7 +169,6 @@ namespace Velocify_v1._1
 
         }
 
-
-
-    }
+        
+    }       
 }
