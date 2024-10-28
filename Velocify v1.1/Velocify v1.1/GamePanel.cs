@@ -32,11 +32,36 @@ namespace Velocify_v1._1
             form1.change_Panel(gId);//Pass into change_Panel(GAME_ID) 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void settingsBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Settings button");
+            // Create a new ToolStripDropDown
+            ToolStripDropDown dropDownMenu = new ToolStripDropDown();
+
+            // Create "Remove" and "Move" menu items
+            ToolStripMenuItem removeItem = new ToolStripMenuItem("Remove");
+            ToolStripMenuItem moveItem = new ToolStripMenuItem("Move");
+
+            // Add click events to the items
+            removeItem.Click += RemovePanel;
+            //moveItem.Click += MoveItem_Click;
+
+            // Add the items to the ToolStripDropDown
+            dropDownMenu.Items.Add(removeItem);
+            dropDownMenu.Items.Add(moveItem);
+
+            // Show the drop-down menu at the button's location
+            dropDownMenu.Show(settingsBtn, new System.Drawing.Point(0, settingsBtn.Height));
         }
 
-        
+        private void RemovePanel(object sender, EventArgs e)
+        {
+            //MessageBox.Show("DELETING USER: "+ Form1.currUserId+ ", DELETING GAME ID: " + this.Controls["settingsBtn"].Tag.ToString());
+            this.Parent.Controls.Remove(this);
+
+            DatabaseHandler db = new DatabaseHandler();
+            db.DeleteGameFromUser(Form1.currUserId, this.Controls["settingsBtn"].Tag.ToString());
+        }
+
+
     }
 }

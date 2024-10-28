@@ -9,11 +9,11 @@ public class DatabaseHandler
 {
     private SQLiteConnection connection;
 
-    public DatabaseHandler(string databasePath)
+    public DatabaseHandler(string databasePath = "")
     {
         // Properly escape the path by using double backslashes 
         //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
-        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-22\\SeniorProject\\VelocifyUsers.db\";Version=3;");
+        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-26\\SeniorProject\\VelocifyUsers.db\";Version=3;");
         connection.Open();
 
         // Ensure tables are created
@@ -161,5 +161,28 @@ public class DatabaseHandler
         }
     }
 
-    
+    public void DeleteGameFromUser(int userId, string gameId)
+    {
+        // SQL query to delete the game from the user's library
+        string query = "DELETE FROM UserGames WHERE user_id = @userId AND game_id = @gameId";
+
+        using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+        {
+            // Bind the parameters
+            cmd.Parameters.AddWithValue("@userId", userId);
+            cmd.Parameters.AddWithValue("@gameId", gameId);
+
+            // Execute the command
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                Console.WriteLine($"Game {gameId} deleted for user {userId}");
+            }
+            else
+            {
+                Console.WriteLine($"Game {gameId} not found for user {userId}");
+            }
+        }
+    }
+
 }

@@ -101,10 +101,10 @@ namespace Velocify_v1._1
         {
             List<string> gameIds = new List<string>();
 
-            // SQL query to get all game IDs for the specified user ID
+            // SQL query to get all game IDs for the specified user ID 
             string query = "SELECT game_id FROM UserGames WHERE user_id = @userId";
 
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-22\\SeniorProject\\VelocifyUsers.db;Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-26\\SeniorProject\\VelocifyUsers.db;Version=3;"))
             {
                 conn.Open();
 
