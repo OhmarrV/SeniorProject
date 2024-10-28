@@ -79,12 +79,12 @@ namespace Velocify_v1._1
                 string gameImg = searchForm.SelectedGameImg;
                 string gameId = searchForm.SelectedGameId;
 
-
-
+                MessageBox.Show(gameId);
+                
                 gameAdded(gameName, gameImg, gameId);
 
                 int currUserId = Form1.currUserId;
-                DatabaseHandler dbHandler = new DatabaseHandler("VelocifyUsers.db");
+                DatabaseHandler dbHandler = new DatabaseHandler();
                 dbHandler.AddGameToUser(currUserId, gameId);
             }
 
@@ -104,7 +104,7 @@ namespace Velocify_v1._1
 
             //change the labelGame text to the selected game
             gamePanel.Controls["labelGame"].Text = gName;
-
+            gamePanel.Controls["settingsBtn"].Tag = gId;
             gamePanelId = gId;
 
             PictureBox pictureBoxGame = gamePanel.Controls["pictureBoxGame"] as PictureBox;

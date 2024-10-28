@@ -25,7 +25,7 @@ namespace Velocify_v1._1
         public LoginForm()
         {
             InitializeComponent();
-            dbHandler = new DatabaseHandler("VelocifyUsers.db"); // Path to your SQLite database file
+            dbHandler = new DatabaseHandler(); // Path to your SQLite database file
         }
 
         private void loginButton_Click(object sender, EventArgs e)

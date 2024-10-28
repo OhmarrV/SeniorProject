@@ -37,9 +37,7 @@ namespace Velocify_v1._1
 
             this.Controls.Add(this.gameLibraryPanel);
 
-            load_UserGames(userId);
-            //GamePanelFLEX gamePanelFLEX = new GamePanelFLEX();
-            //gamePanelFlex.gameAddBtnLoad();
+            LoadUserGames(userId);
         }
 
 
@@ -49,8 +47,6 @@ namespace Velocify_v1._1
             if (mainPanel.Controls[0].Name != "GamePanelFLEX")
             {
                 mainPanel.Controls.Clear();
-                //add gamePanelFlex onto panel3
-                //GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
                 gamePanelFlex.Dock = DockStyle.Fill;
                 gamePanelFlex.Show();
                 mainPanel.Controls.Add(gamePanelFlex);
@@ -97,43 +93,17 @@ namespace Velocify_v1._1
             mainPanel.Controls.Add(optiFlex);
         }
 
-        private void load_UserGames(int uId)
+        private void LoadUserGames(int userId)
         {
-            List<string> gameIds = new List<string>();
+            DatabaseHandler dbHandler = new DatabaseHandler();
+            List<string> gameIds = dbHandler.LoadUserGames(userId);
 
-            // SQL query to get all game IDs for the specified user ID 
-            string query = "SELECT game_id FROM UserGames WHERE user_id = @userId";
-
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-26\\SeniorProject\\VelocifyUsers.db;Version=3;"))
-            {
-                conn.Open();
-
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@userId", currUserId);
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
-                    {
-                        // Loop through the results
-                        while (reader.Read())
-                        {
-                            // Get the game_id from the current row
-                            string gameId = reader["game_id"].ToString();
-                            gameIds.Add(gameId);  // Add the game_id to the list
-                        }
-                    }
-                }
-            }
-
-            // For each gameId retrieved, call loadGamesAdded
             foreach (string gameId in gameIds)
             {
-                // Create a new GameAddButton and pass the parent container (gameLibraryPanel)
+                // Load each game panel using the game ID
                 gamePanelFlex.gameAddBtnLoad(gameId);
-                //gameAddButton.loadGamesAdded(gameId);  // Pass gameLibraryPanel as parent
             }
-
         }
-
 
 
     }

@@ -20,12 +20,9 @@ namespace Velocify_v1._1
 
         private void pictureBoxGame_Click(object sender, EventArgs e)
         {
-            //UserControl gamePanel = new GamePanel();
-            //q: how to access the GamePanel settingsBtn control
-            //a: create a public method in GamePanel that returns the settingsBtn control
 
             string gId = this.Controls["settingsBtn"].Tag.ToString();
-            MessageBox.Show("GamePanel ID: " + gId);
+            MessageBox.Show("GamePanel.cs ID: " + gId);
 
             Form1 form1 = (Form1)this.FindForm();
 

@@ -9,11 +9,11 @@ public class DatabaseHandler
 {
     private SQLiteConnection connection;
 
-    public DatabaseHandler(string databasePath = "")
+    public DatabaseHandler()
     {
         // Properly escape the path by using double backslashes 
         //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
-        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\10-26\\SeniorProject\\VelocifyUsers.db\";Version=3;");
+        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\VelocifyUsers.db\";Version=3;");
         connection.Open();
 
         // Ensure tables are created
@@ -159,6 +159,27 @@ public class DatabaseHandler
             int rowsAffected = cmd.ExecuteNonQuery();
             Console.WriteLine($"Rows affected: {rowsAffected}"); // Logs how many rows were inserted
         }
+    }
+
+
+    public List<string> LoadUserGames(int userId)
+    {
+        List<string> gameIds = new List<string>();
+        string query = "SELECT game_id FROM UserGames WHERE user_id = @userId";
+
+        using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+        {
+            cmd.Parameters.AddWithValue("@userId", userId);
+            using (SQLiteDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    gameIds.Add(reader["game_id"].ToString());
+                }
+            }
+        }
+
+        return gameIds;
     }
 
     public void DeleteGameFromUser(int userId, string gameId)
