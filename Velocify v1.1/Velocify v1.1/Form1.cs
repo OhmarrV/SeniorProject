@@ -19,7 +19,7 @@ namespace Velocify_v1._1
             InitializeComponent();
 
             mainPanel.Controls.Clear();
-            
+
             gamePanelFlex.Dock = DockStyle.Fill;
             gamePanelFlex.Show();
             mainPanel.Controls.Add(gamePanelFlex);
@@ -105,6 +105,9 @@ namespace Velocify_v1._1
             }
         }
 
-
+        private void userInfo1_Load(object sender, EventArgs e)
+        {
+            userInfo1.Tag = currUserId;
+        }
     }
 }

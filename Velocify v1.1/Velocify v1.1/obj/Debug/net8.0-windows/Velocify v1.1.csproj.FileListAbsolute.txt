@@ -448,3 +448,4 @@ C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-28\SeniorProject\Velocify
 C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-28\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.pdb
 C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-28\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.genruntimeconfig.cache
 C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-28\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\ref\Velocify v1.1.dll
+C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-28\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.CurrUserInfo.resources

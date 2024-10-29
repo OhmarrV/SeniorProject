@@ -3,10 +3,10 @@ using System.Data.SQLite;
 
 namespace Velocify_v1._1
 {
-    internal class DatabaseHelper 
+    internal class DatabaseHelper
     {
-        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\10-28\new main\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
-                                                                                                                                                                           // Method to get a new SQLite connection
+        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-28\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
+                                                                                                                                                              // Method to get a new SQLite connection
         public SQLiteConnection GetConnection()
         {
             return new SQLiteConnection(connectionString);
@@ -90,6 +90,86 @@ namespace Velocify_v1._1
             SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
             return cmd.ExecuteReader();
+        }
+
+        public bool SaveSessionToken(int userId, string token)
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                using (SQLiteTransaction transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Reset current_token to 0 for all users
+                        string resetQuery = "UPDATE UserInfo SET current_token = 0";
+                        using (SQLiteCommand resetCmd = new SQLiteCommand(resetQuery, conn))
+                        {
+                            resetCmd.ExecuteNonQuery();
+                        }
+
+                        // Update session_token and set current_token to 1 for the specified user
+                        string updateQuery = "UPDATE UserInfo SET session_token = @token, current_token = 1 WHERE id = @userId";
+                        using (SQLiteCommand updateCmd = new SQLiteCommand(updateQuery, conn))
+                        {
+                            updateCmd.Parameters.AddWithValue("@token", token);
+                            updateCmd.Parameters.AddWithValue("@userId", userId);
+                            updateCmd.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        return true;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        return false;
+                    }
+                }
+            }
+        }
+
+        public string SearchSessionToken(int userId)
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT session_token FROM UserInfo WHERE id = @userId AND current_token = 1";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@userId", userId);
+                    object result = cmd.ExecuteScalar();
+
+                    return result != null && result != DBNull.Value ? result.ToString() : null;
+                }
+            }
+        }
+
+        public int SearchActiveSessionToken()
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT id FROM UserInfo WHERE current_token = 1";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    return result != null && result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                }
+            }
+        }
+
+        public bool ClearAllSessionTokens()
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "UPDATE UserInfo SET current_token = 0";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
         }
     }
 }

@@ -206,4 +206,29 @@ public class DatabaseHandler
         }
     }
 
+    public string FindUserName(int userId)
+    {
+        // SQL query to find the username by ID
+        string query = "SELECT username FROM UserInfo WHERE id = @userId";
+
+        using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+        {
+            // Bind the parameter
+            cmd.Parameters.AddWithValue("@userId", userId);
+
+            // Execute the command
+            object result = cmd.ExecuteScalar();
+            if (result != null)
+            {
+                return result.ToString();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+
+    
 }
