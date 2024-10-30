@@ -83,6 +83,36 @@ namespace Velocify_v1._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settingDots {
+            get {
+                object obj = ResourceManager.GetObject("settingDots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settingsBtnDots {
+            get {
+                object obj = ResourceManager.GetObject("settingsBtnDots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settingsBtnDots1 {
+            get {
+                object obj = ResourceManager.GetObject("settingsBtnDots1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settingsBtns {
             get {
                 object obj = ResourceManager.GetObject("settingsBtns", resourceCulture);
@@ -96,6 +126,16 @@ namespace Velocify_v1._1.Properties {
         internal static System.Drawing.Bitmap userIcon {
             get {
                 object obj = ResourceManager.GetObject("userIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap velocify_logo_SOLO {
+            get {
+                object obj = ResourceManager.GetObject("velocify logo SOLO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

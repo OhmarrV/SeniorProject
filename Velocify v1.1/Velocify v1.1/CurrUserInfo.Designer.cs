@@ -41,9 +41,9 @@
             userName.AutoSize = true;
             userName.Font = new Font("Agency FB", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             userName.ForeColor = SystemColors.Control;
-            userName.Location = new Point(104, 48);
+            userName.Location = new Point(91, 36);
             userName.Name = "userName";
-            userName.Size = new Size(172, 50);
+            userName.Size = new Size(131, 39);
             userName.TabIndex = 0;
             userName.Text = "User Name";
             // 
@@ -51,11 +51,11 @@
             // 
             userInfo1.BackColor = Color.Transparent;
             userInfo1.Enabled = false;
-            userInfo1.Location = new Point(13, 15);
-            userInfo1.Margin = new Padding(3, 4, 3, 4);
+            userInfo1.Location = new Point(11, 11);
             userInfo1.Name = "userInfo1";
-            userInfo1.Size = new Size(85, 83);
+            userInfo1.Size = new Size(74, 62);
             userInfo1.TabIndex = 1;
+            userInfo1.Load += userInfo1_Load;
             // 
             // panel1
             // 
@@ -63,8 +63,9 @@
             panel1.Controls.Add(userName);
             panel1.Controls.Add(userInfo1);
             panel1.Location = new Point(-1, -2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(586, 113);
+            panel1.Size = new Size(513, 85);
             panel1.TabIndex = 2;
             // 
             // label1
@@ -72,9 +73,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(12, 165);
+            label1.Location = new Point(10, 124);
             label1.Name = "label1";
-            label1.Size = new Size(109, 46);
+            label1.Size = new Size(90, 37);
             label1.TabIndex = 3;
             label1.Text = "label1";
             // 
@@ -83,21 +84,22 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(12, 265);
+            label2.Location = new Point(10, 199);
             label2.Name = "label2";
-            label2.Size = new Size(109, 46);
+            label2.Size = new Size(90, 37);
             label2.TabIndex = 4;
             label2.Text = "label2";
             // 
             // CurrUserInfo
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlText;
-            ClientSize = new Size(582, 353);
+            ClientSize = new Size(509, 265);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "CurrUserInfo";

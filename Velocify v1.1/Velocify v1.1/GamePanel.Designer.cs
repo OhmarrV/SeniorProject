@@ -32,7 +32,9 @@
             labelGame = new Label();
             settingsBtn = new Button();
             adfToolStripMenuItem = new ToolStripMenuItem();
+            settingsDots = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGame).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)settingsDots).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxGame
@@ -61,9 +63,12 @@
             // 
             // settingsBtn
             // 
-            settingsBtn.Location = new Point(140, 223);
+            settingsBtn.Cursor = Cursors.Hand;
+            settingsBtn.FlatStyle = FlatStyle.Popup;
+            settingsBtn.ForeColor = Color.Transparent;
+            settingsBtn.Location = new Point(145, 223);
             settingsBtn.Name = "settingsBtn";
-            settingsBtn.Size = new Size(57, 23);
+            settingsBtn.Size = new Size(46, 30);
             settingsBtn.TabIndex = 2;
             settingsBtn.Text = "settings";
             settingsBtn.UseVisualStyleBackColor = true;
@@ -75,17 +80,31 @@
             adfToolStripMenuItem.Size = new Size(180, 22);
             adfToolStripMenuItem.Text = "adf";
             // 
+            // settingsDots
+            // 
+            settingsDots.Cursor = Cursors.Hand;
+            settingsDots.Enabled = false;
+            settingsDots.Image = Properties.Resources.settingDots;
+            settingsDots.Location = new Point(145, 215);
+            settingsDots.Name = "settingsDots";
+            settingsDots.Size = new Size(46, 42);
+            settingsDots.SizeMode = PictureBoxSizeMode.StretchImage;
+            settingsDots.TabIndex = 3;
+            settingsDots.TabStop = false;
+            // 
             // GamePanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(settingsDots);
             Controls.Add(settingsBtn);
             Controls.Add(labelGame);
             Controls.Add(pictureBoxGame);
             Name = "GamePanel";
             Size = new Size(200, 257);
             ((System.ComponentModel.ISupportInitialize)pictureBoxGame).EndInit();
+            ((System.ComponentModel.ISupportInitialize)settingsDots).EndInit();
             ResumeLayout(false);
         }
 
@@ -95,5 +114,6 @@
         private Label labelGame;
         private Button settingsBtn;
         private ToolStripMenuItem adfToolStripMenuItem;
+        private PictureBox settingsDots;
     }
 }

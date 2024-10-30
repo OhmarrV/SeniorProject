@@ -24,5 +24,9 @@ namespace Velocify_v1._1
 
         }
 
+        private void userInfo1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
