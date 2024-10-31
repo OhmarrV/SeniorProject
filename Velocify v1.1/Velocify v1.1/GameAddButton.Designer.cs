@@ -85,7 +85,7 @@ namespace Velocify_v1._1
 
                 int currUserId = Form1.currUserId;
                 DatabaseHandler dbHandler = new DatabaseHandler();
-                dbHandler.AddGameToUser(currUserId, gameId);
+                dbHandler.AddGameToUser(currUserId, gameId, gameName);
             }
 
 

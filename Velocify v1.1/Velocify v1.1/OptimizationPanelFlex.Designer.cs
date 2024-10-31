@@ -28,31 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            settingsPanel = new Panel();
+            nameUi = new PictureBox();
+            namePanel = new Panel();
+            gameLabel = new Label();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)nameUi).BeginInit();
+            namePanel.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // settingsPanel
             // 
-            button1.Dock = DockStyle.Fill;
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(743, 527);
-            button1.TabIndex = 0;
-            button1.Text = "Optimization Page";
-            button1.UseVisualStyleBackColor = true;
+            settingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            settingsPanel.AutoScroll = true;
+            settingsPanel.BackColor = SystemColors.ActiveCaption;
+            settingsPanel.Location = new Point(0, 70);
+            settingsPanel.Name = "settingsPanel";
+            settingsPanel.Size = new Size(650, 325);
+            settingsPanel.TabIndex = 0;
+            // 
+            // nameUi
+            // 
+            nameUi.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            nameUi.BackColor = Color.Transparent;
+            nameUi.Image = Properties.Resources.name_line;
+            nameUi.Location = new Point(6, 3);
+            nameUi.Name = "nameUi";
+            nameUi.Size = new Size(638, 61);
+            nameUi.SizeMode = PictureBoxSizeMode.StretchImage;
+            nameUi.TabIndex = 1;
+            nameUi.TabStop = false;
+            // 
+            // namePanel
+            // 
+            namePanel.BackColor = Color.RosyBrown;
+            namePanel.Controls.Add(gameLabel);
+            namePanel.Controls.Add(nameUi);
+            namePanel.Dock = DockStyle.Top;
+            namePanel.Location = new Point(0, 0);
+            namePanel.Name = "namePanel";
+            namePanel.Size = new Size(650, 68);
+            namePanel.TabIndex = 1;
+            // 
+            // gameLabel
+            // 
+            gameLabel.Anchor = AnchorStyles.None;
+            gameLabel.AutoEllipsis = true;
+            gameLabel.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gameLabel.Location = new Point(147, 11);
+            gameLabel.Name = "gameLabel";
+            gameLabel.Size = new Size(356, 45);
+            gameLabel.TabIndex = 2;
+            gameLabel.Text = "Game Name";
+            gameLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Chartreuse;
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(650, 395);
+            panel1.TabIndex = 0;
             // 
             // OptimizationPanelFlex
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
+            Controls.Add(namePanel);
+            Controls.Add(settingsPanel);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "OptimizationPanelFlex";
-            Size = new Size(743, 527);
+            Size = new Size(650, 395);
+            ((System.ComponentModel.ISupportInitialize)nameUi).EndInit();
+            namePanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private Panel settingsPanel;
+        private PictureBox nameUi;
+        private Panel namePanel;
+        private Label gameLabel;
+        private Panel panel1;
     }
 }

@@ -1,15 +1,23 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Data.SQLite;
 
 namespace Velocify_v1._1
 {
-    internal class DatabaseHelper 
+    internal class DatabaseHelper
     {
         private string connectionString = @"Data Source=C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
-                                                                                                                                                              // Method to get a new SQLite connection
+                                                                                                                                                                                 // Method to get a new SQLite connection
+        private string connectionStringGDB = @"Data Source=C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\VelocifyOptimization.db; Version=3";
+
         public SQLiteConnection GetConnection()
         {
             return new SQLiteConnection(connectionString);
+        }
+
+        public SQLiteConnection GetConnectionGDB()
+        {
+            return new SQLiteConnection(connectionStringGDB);
         }
 
         // Method to retrieve user information
@@ -171,5 +179,75 @@ namespace Velocify_v1._1
                 }
             }
         }
+
+        public string GetGameName(int gameId)
+        {
+            using (SQLiteConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT game_name FROM UserGames WHERE game_id = @gameId";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@gameId", gameId);
+                    object result = cmd.ExecuteScalar();
+
+                    return result != null && result != DBNull.Value ? result.ToString() : "Game name not found";
+                }
+            }
+        }
+
+
+
+
+        /////// GAME OPTIMIZATION PANEL METHODS ///////////
+        ///
+
+        public List<string> GetUniqueSettingsSections(string gameName)
+        {
+            using (SQLiteConnection conn = GetConnectionGDB())
+            {
+                conn.Open();
+                string query = "SELECT DISTINCT settings_section FROM OptimizationSettings WHERE game_name = @gameName";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@gameName", gameName);
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        List<string> sections = new List<string>();
+                        while (reader.Read())
+                        {
+                            sections.Add(reader["settings_section"].ToString());
+                        }
+                        return sections;
+                    }
+                }
+            }
+        }
+
+        public List<(string gameSetting, string settingValue)> GetSettingsForSection(string gameName, string settingsSection)
+        {
+            using (SQLiteConnection conn = GetConnectionGDB())
+            {
+                conn.Open();
+                string query = "SELECT game_setting, setting_value FROM OptimizationSettings WHERE game_name = @gameName AND settings_section = @settingsSection";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@gameName", gameName);
+                    cmd.Parameters.AddWithValue("@settingsSection", settingsSection);
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        List<(string gameSetting, string settingValue)> settings = new List<(string gameSetting, string settingValue)>();
+                        while (reader.Read())
+                        {
+                            string gameSetting = reader["game_setting"].ToString();
+                            string settingValue = reader["setting_value"].ToString();
+                            settings.Add((gameSetting, settingValue));
+                        }
+                        return settings;
+                    }
+                }
+            }
+        }
+
     }
 }

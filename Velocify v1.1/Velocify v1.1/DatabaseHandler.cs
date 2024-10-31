@@ -147,14 +147,15 @@ public class DatabaseHandler
         return gameIds;
     }
 
-    public void AddGameToUser(int userId, string gameId)
+    public void AddGameToUser(int userId, string gameId, string gameName)
     {
-        string query = "INSERT INTO UserGames (user_id, game_id) VALUES (@userId, @gameId)";
+        string query = "INSERT INTO UserGames (user_id, game_id, game_name) VALUES (@userId, @gameId, @gameName)";
 
         using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
         {
             cmd.Parameters.AddWithValue("@userId", userId);
             cmd.Parameters.AddWithValue("@gameId", gameId);
+            cmd.Parameters.AddWithValue("@gameName", gameName);
 
             int rowsAffected = cmd.ExecuteNonQuery();
             Console.WriteLine($"Rows affected: {rowsAffected}"); // Logs how many rows were inserted

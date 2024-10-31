@@ -83,6 +83,16 @@ namespace Velocify_v1._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap name_line {
+            get {
+                object obj = ResourceManager.GetObject("name line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settingDots {
             get {
                 object obj = ResourceManager.GetObject("settingDots", resourceCulture);

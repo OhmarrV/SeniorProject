@@ -87,7 +87,7 @@ namespace Velocify_v1._1
         {
             //USE GAMEID TO CHANGE TO SPECIFIC PANEL WITH GAME INFO
             mainPanel.Controls.Clear();
-            OptimizationPanelFlex optiFlex = new OptimizationPanelFlex();
+            OptimizationPanelFlex optiFlex = new OptimizationPanelFlex(gameId);
             optiFlex.Dock = DockStyle.Fill;
             optiFlex.Show();
             mainPanel.Controls.Add(optiFlex);

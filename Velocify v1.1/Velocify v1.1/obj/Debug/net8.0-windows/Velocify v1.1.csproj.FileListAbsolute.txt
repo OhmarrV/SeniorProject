@@ -497,3 +497,5 @@ C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\Sen
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.pdb
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify v1.1.genruntimeconfig.cache
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\ref\Velocify v1.1.dll
+C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.SettingSection.resources
+C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.SettingPanel.resources

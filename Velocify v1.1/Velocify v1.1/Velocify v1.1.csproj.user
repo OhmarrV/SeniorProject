@@ -40,6 +40,12 @@
     <Compile Update="SearchForGames.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SettingSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
