@@ -4,11 +4,11 @@ using System.Data.SQLite;
 
 namespace Velocify_v1._1
 {
-    internal class DatabaseHelper
+    internal class DatabaseHelper 
     {
-        private string connectionString = @"Data Source=C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
+        private string connectionString = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-31\SeniorProject\VelocifyUsers.db; Version=3"; //change to local path for Velocify db
                                                                                                                                                                                  // Method to get a new SQLite connection
-        private string connectionStringGDB = @"Data Source=C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\10-29\SeniorProject\VelocifyOptimization.db; Version=3";
+        private string connectionStringGDB = @"Data Source=C:\Users\jacom\Documents\2024 WorkSpace\SP Branches\10-31\SeniorProject\VelocifyOptimization.db; Version=3";
 
         public SQLiteConnection GetConnection()
         {

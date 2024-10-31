@@ -16,7 +16,9 @@ namespace Velocify_v1._1
 
         public Form1(int userId)
         {
+
             InitializeComponent();
+            this.Opacity = 0; //Loads form in the background
 
             mainPanel.Controls.Clear();
 
@@ -37,7 +39,7 @@ namespace Velocify_v1._1
 
             this.Controls.Add(this.gameLibraryPanel);
 
-            LoadUserGames(userId);
+            //LoadUserGames(userId);
         }
 
 
@@ -108,6 +110,37 @@ namespace Velocify_v1._1
         private void userInfo1_Load(object sender, EventArgs e)
         {
             userInfo1.Tag = currUserId;
+        }
+
+        private async Task LoadFormAsync(int userId)
+        {
+            // Show the loading form
+            using (LoadingForm loadingForm = new LoadingForm())
+            {
+                loadingForm.Show();
+                loadingForm.Refresh();
+
+                // Load the user games directly on the main thread
+                LoadUserGames(userId);
+
+                // Ensure LoadingForm is displayed for at least 2 seconds
+                await Task.Delay(2000);
+
+                // Close the loading form after loading completes and delay
+                loadingForm.Close();
+            }
+        }
+
+        protected override async void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+
+            // Start loading user games asynchronously
+            await LoadFormAsync(userId);
+
+            this.Opacity = 1;
+
         }
     }
 }
