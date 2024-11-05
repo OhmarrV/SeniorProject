@@ -15,6 +15,11 @@ namespace Velocify_v1._1
         public NetworkPanelFLEX()
         {
             InitializeComponent();
+
+            NetworkPanel networkPanel = new NetworkPanel();
+            networkLibraryPanel.Controls.Add(networkPanel);
+
         }
+
     }
 }

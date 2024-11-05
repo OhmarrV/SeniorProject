@@ -13,7 +13,7 @@ public class DatabaseHandler
     {
         // Properly escape the path by using double backslashes 
         //Console.WriteLine($"Using database: C:\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\new main\\SeniorProject\\VelocifyUsers.db\".db");
-        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\VelocifyUsers.db\";Version=3;");
+        connection = new SQLiteConnection($"Data Source=\"C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-31\\SeniorProject\\VelocifyUsers.db\";Version=3;");
         connection.Open();
 
         // Ensure tables are created
@@ -147,14 +147,15 @@ public class DatabaseHandler
         return gameIds;
     }
 
-    public void AddGameToUser(int userId, string gameId)
+    public void AddGameToUser(int userId, string gameId, string gameName)
     {
-        string query = "INSERT INTO UserGames (user_id, game_id) VALUES (@userId, @gameId)";
+        string query = "INSERT INTO UserGames (user_id, game_id, game_name) VALUES (@userId, @gameId, @gameName)";
 
         using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
         {
             cmd.Parameters.AddWithValue("@userId", userId);
             cmd.Parameters.AddWithValue("@gameId", gameId);
+            cmd.Parameters.AddWithValue("@gameName", gameName);
 
             int rowsAffected = cmd.ExecuteNonQuery();
             Console.WriteLine($"Rows affected: {rowsAffected}"); // Logs how many rows were inserted
@@ -206,4 +207,29 @@ public class DatabaseHandler
         }
     }
 
+    public string FindUserName(int userId)
+    {
+        // SQL query to find the username by ID
+        string query = "SELECT username FROM UserInfo WHERE id = @userId";
+
+        using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+        {
+            // Bind the parameter
+            cmd.Parameters.AddWithValue("@userId", userId);
+
+            // Execute the command
+            object result = cmd.ExecuteScalar();
+            if (result != null)
+            {
+                return result.ToString();
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+
+    
 }

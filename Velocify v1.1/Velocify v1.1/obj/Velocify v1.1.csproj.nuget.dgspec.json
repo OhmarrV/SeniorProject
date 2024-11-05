@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {}
+    "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-31\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {
+    "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-31\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+        "projectUniqueName": "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-31\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
         "projectName": "Velocify v1.1",
-        "projectPath": "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+        "projectPath": "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-31\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
         "packagesPath": "C:\\Users\\jacom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-28\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
+        "outputPath": "C:\\Users\\jacom\\Documents\\2024 WorkSpace\\SP Branches\\10-31\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jacom\\AppData\\Roaming\\NuGet\\NuGet.Config",

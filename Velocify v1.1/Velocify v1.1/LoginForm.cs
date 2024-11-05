@@ -3,29 +3,43 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Velocify_v1._1
 {
     public partial class LoginForm : Form
     {
         private DatabaseHandler dbHandler;
+        private DatabaseHelper dbHelper;
         private int currUserId;  // Store the current user's ID
-
+        private string currToken;
         private string username2;
         private string password2;
         private int currUser2;
 
         private int currUser; //user id is stored here
 
+
+        public static int globalId { get; set; }
+
+
         public LoginForm()
         {
-            InitializeComponent();
-            dbHandler = new DatabaseHandler(); // Path to your SQLite database file
+            
+            dbHandler = new DatabaseHandler();
+            dbHelper = new DatabaseHelper();
+
+            int savedUserId = globalId;
+
+
+           InitializeComponent();
+
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -35,7 +49,6 @@ namespace Velocify_v1._1
                 string enteredUsername = usernameTextBox.Text.ToLower();
                 string enteredPassword = passwordTextBox.Text;
 
-                // Check for empty fields
                 if (string.IsNullOrEmpty(enteredUsername) || string.IsNullOrEmpty(enteredPassword))
                 {
                     MessageBox.Show("Please enter both username and password.");
@@ -44,21 +57,23 @@ namespace Velocify_v1._1
 
                 Console.WriteLine($"Login attempt with Username: {enteredUsername}");
 
-                // Authenticate the user
                 int? userId = dbHandler.AuthenticateUser(enteredUsername, enteredPassword);
 
                 if (userId.HasValue)
                 {
-                    currUserId = userId.Value;  // Store the current user's ID
+                    currUserId = userId.Value;
+                    globalId = currUserId;
                     MessageBox.Show($"LOGIN SUCCESSFUL: \nUser ID: {currUserId}");
 
-                    // Load the user's games
-                    //List<string> userGames = dbHandler.GetUserGames(currUserId);
+                    // If "Stay logged in" is checked, save the session token and set current_token
+                    if (checkBox1.Checked)
+                    {
+                        string sessionToken = GenerateSessionToken();
+                        dbHelper.SaveSessionToken(currUserId, sessionToken);
+                        Console.WriteLine("Session token saved for 'Stay logged in' feature.");
+                    }
 
-                    // Pass the user games to the next form (Form1 in this case)
-                    Form1 form1 = new Form1(currUserId); // Form1({"1238538", "1231", 1235523", "342243"}, 0);
-                    form1.Show();
-                    this.Hide();
+                    OpenMainForm(currUserId);
                 }
                 else
                 {
@@ -67,7 +82,6 @@ namespace Velocify_v1._1
             }
             catch (Exception ex)
             {
-                // Handle any errors that might occur
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
@@ -92,5 +106,46 @@ namespace Velocify_v1._1
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();  // Show the registration form as a modal dialog
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Check changed");
+            //check if the checkbox is checked
+            //if (checkBox1.Checked)
+            //{
+            //    DatabaseHelper db = new DatabaseHelper();
+            //    string sessionToken = GenerateSessionToken();
+
+            //    // Ensure `currUserId` (current logged-in user ID) is available
+            //    if (currUserId >= 0)
+            //    {
+            //        db.SaveSessionToken(currUserId, sessionToken); // Save the session token for the user
+            //        Console.WriteLine("Session token saved for 'Stay logged in' feature.");
+            //    }
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("User logging in for this session.");
+            //}
+        }
+
+        public string GenerateSessionToken()
+        {
+            return Guid.NewGuid().ToString();
+        }
+
+        
+
+        private void OpenMainForm(int userId)
+        {
+            Form1 form1 = new Form1(userId);
+            form1.Show();
+            this.Hide();
+        }
+
+
+
+
     }
 }

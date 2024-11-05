@@ -34,14 +34,14 @@
             // 
             // userProfilePic
             // 
-            userProfilePic.AccessibleRole = AccessibleRole.PushButton;
             userProfilePic.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             userProfilePic.BackgroundImageLayout = ImageLayout.Center;
             userProfilePic.Cursor = Cursors.Hand;
             userProfilePic.Image = Properties.Resources.userIcon;
             userProfilePic.Location = new Point(0, 0);
+            userProfilePic.Margin = new Padding(3, 4, 3, 4);
             userProfilePic.Name = "userProfilePic";
-            userProfilePic.Size = new Size(515, 515);
+            userProfilePic.Size = new Size(589, 687);
             userProfilePic.SizeMode = PictureBoxSizeMode.StretchImage;
             userProfilePic.TabIndex = 0;
             userProfilePic.TabStop = false;
@@ -49,12 +49,13 @@
             // 
             // UserInfo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(userProfilePic);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UserInfo";
-            Size = new Size(515, 515);
+            Size = new Size(589, 687);
             ((System.ComponentModel.ISupportInitialize)userProfilePic).EndInit();
             ResumeLayout(false);
         }

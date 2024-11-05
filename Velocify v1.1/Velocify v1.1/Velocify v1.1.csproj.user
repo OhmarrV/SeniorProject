@@ -7,11 +7,17 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CurrUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GamePanelFLEX.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GamSelection.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="LoadingForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
@@ -25,6 +31,9 @@
     <Compile Update="MainPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="NetworkPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="NetworkPanelFLEX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -36,6 +45,12 @@
     </Compile>
     <Compile Update="SearchForGames.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SettingSection.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserInfo.cs">
       <SubType>UserControl</SubType>

@@ -117,6 +117,45 @@ namespace Velocify_v1._1
             return gameList; // Return the list of games
         }
 
+        public static async Task<string> GameNameByID(int gameId)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                // Set up headers for the request
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("Client-ID", clientId);
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+
+                // Build the query to get the game details by ID
+                var query = $"fields name; where id = {gameId};";
+                var content = new StringContent(query, Encoding.Default, "application/json");
+
+                // Make the API request
+                HttpResponseMessage response = await client.PostAsync(baseUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    // Parse JSON to extract the name
+                    JArray data = JArray.Parse(jsonResponse);
+                    if (data.Count > 0)
+                    {
+                        string name = data[0]["name"].Value<string>();
+                        return name;
+                    }
+                    else
+                    {
+                        return "Game not found";
+                    }
+                }
+                else
+                {
+                    return $"Error: {response.StatusCode} - {response.ReasonPhrase}";
+                }
+            }
+        }
+
         public static async Task<List<GameData>> GetGamesByNameAndGenreAsync(string gameName, string genre = "")
         {
             List<GameData> games = new List<GameData>();
@@ -175,7 +214,9 @@ namespace Velocify_v1._1
 
                 return games;
             }
-        }
+
+            
+    }
 
 
 
