@@ -14,11 +14,14 @@ namespace Velocify_v1._1
         public FlowLayoutPanel gameLibraryPanel;
         GamePanelFLEX gamePanelFlex = new GamePanelFLEX();
 
+        private Image buttonClickedImg;
 
         public Form1(int userId)
         {
 
             InitializeComponent();
+            buttonClickedImg = gameButton.Image;
+
             this.Opacity = 0; //Loads form in the background
 
             mainPanel.Controls.Clear();
@@ -53,8 +56,15 @@ namespace Velocify_v1._1
                 gamePanelFlex.Dock = DockStyle.Fill;
                 gamePanelFlex.Show();
                 mainPanel.Controls.Add(gamePanelFlex);
+                netButton.Image = null;
+                gameButton.Image = buttonClickedImg;
             }
-            MessageBox.Show(mainPanel.Controls[0].Name);
+            else
+            {
+                MessageBox.Show(mainPanel.Controls[0].Name);
+                
+            }
+            
         }
 
 
@@ -69,13 +79,17 @@ namespace Velocify_v1._1
                 netPanelFlex.Show();
                 mainPanel.Controls.Add(netPanelFlex);
                 mainPanel.Controls[0].Name = "NetworkPanelFLEX"; //BUG HERE mainPanel.Controls[0].Name is set to NetowrkPanelFLEX with network misspelled
+                netButton.Image = buttonClickedImg;
+                gameButton.Image = null;
             }
             else
             {
                 MessageBox.Show("Already on Network Panel");
+                Debug.WriteLine(mainPanel.Controls[0].Name);
+                //netButton.Image = null;
             }
 
-            MessageBox.Show(mainPanel.Controls[0].Name);
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

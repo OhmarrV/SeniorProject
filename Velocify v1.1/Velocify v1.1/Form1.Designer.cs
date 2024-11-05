@@ -1,4 +1,6 @@
-﻿namespace Velocify_v1._1
+﻿using System.Drawing.Imaging;
+
+namespace Velocify_v1._1
 {
     partial class Form1
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -45,7 +48,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            panel1.BackColor = SystemColors.Highlight;
+            panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button3);
@@ -72,7 +75,7 @@
             // label1
             // 
             label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.ForeColor = SystemColors.ControlText;
             label1.Location = new Point(0, 100);
             label1.Name = "label1";
             label1.Size = new Size(157, 55);
@@ -82,42 +85,63 @@
             // 
             // button3
             // 
-            button3.Location = new Point(1, 388);
+            button3.BackColor = SystemColors.Control;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = SystemColors.ControlText;
+            button3.Location = new Point(-8, 388);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(154, 83);
+            button3.Size = new Size(172, 83);
             button3.TabIndex = 2;
             button3.Text = "API Test";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // netButton
             // 
             netButton.AccessibleName = "";
-            netButton.Location = new Point(1, 281);
+            netButton.BackColor = SystemColors.Control;
+            netButton.FlatStyle = FlatStyle.Popup;
+            netButton.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            netButton.ForeColor = SystemColors.ControlText;
+            netButton.Location = new Point(-8, 254);
             netButton.Margin = new Padding(3, 4, 3, 4);
             netButton.Name = "netButton";
-            netButton.Size = new Size(154, 83);
+            netButton.Size = new Size(172, 83);
             netButton.TabIndex = 1;
             netButton.Text = "Networking";
-            netButton.UseVisualStyleBackColor = true;
+            netButton.UseVisualStyleBackColor = false;
             netButton.Click += netButton_Click;
+            netButton.Padding = new Padding(10, 0, 0, 0);
+            netButton.Image = null;
+            netButton.ImageAlign = ContentAlignment.MiddleLeft;
+            netButton.BackgroundImageLayout = ImageLayout.Zoom;
             // 
             // gameButton
             // 
-            gameButton.Location = new Point(1, 175);
+            gameButton.BackColor = SystemColors.Control;
+            gameButton.BackgroundImageLayout = ImageLayout.Zoom;
+            gameButton.FlatAppearance.MouseOverBackColor = Color.Red;
+            gameButton.FlatStyle = FlatStyle.Popup;
+            gameButton.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            gameButton.Image = (Image)resources.GetObject("gameButton.Image");
+            gameButton.Image = SetImageOpacity((Image)resources.GetObject("gameButton.Image"), 0.5f);
+            gameButton.ImageAlign = ContentAlignment.MiddleLeft;
+            gameButton.Location = new Point(-8, 172);
             gameButton.Margin = new Padding(3, 4, 3, 4);
             gameButton.Name = "gameButton";
-            gameButton.Size = new Size(154, 83);
+            gameButton.Padding = new Padding(10, 0, 0, 0);
+            gameButton.Size = new Size(172, 83);
             gameButton.TabIndex = 0;
             gameButton.Text = "Games";
-            gameButton.UseVisualStyleBackColor = true;
+            gameButton.UseVisualStyleBackColor = false;
             gameButton.Click += gameButton_Click;
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = SystemColors.HotTrack;
+            panel2.BackColor = Color.Gainsboro;
             panel2.Controls.Add(userInfo1);
             panel2.Location = new Point(155, -1);
             panel2.Margin = new Padding(3, 4, 3, 4);
@@ -177,7 +201,22 @@
         private PictureBox pictureBox2;
         private Panel mainPanel;
 
+        // Set the opacity of the image within the button
+        public Image SetImageOpacity(Image image, float opacity)
+        {
+            Bitmap bmp = new Bitmap(image.Width, image.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                ColorMatrix matrix = new ColorMatrix();
+                matrix.Matrix33 = opacity; // Set the opacity level
 
+                ImageAttributes attributes = new ImageAttributes();
+                attributes.SetColorMatrix(matrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+
+                g.DrawImage(image, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
+            }
+            return bmp;
+        }
 
     }
 }
