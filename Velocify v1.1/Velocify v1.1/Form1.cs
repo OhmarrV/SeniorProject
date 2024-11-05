@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Velocify_v1._1

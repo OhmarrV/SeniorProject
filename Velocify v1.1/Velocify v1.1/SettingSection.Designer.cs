@@ -37,22 +37,24 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BackColor = Color.LightSalmon;
+            panel1.BackColor = Color.Snow;
             panel1.Controls.Add(indvSettingsPanel);
             panel1.Controls.Add(sectionNameLabel);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(432, 320);
+            panel1.Size = new Size(494, 427);
             panel1.TabIndex = 0;
             // 
             // indvSettingsPanel
             // 
             indvSettingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             indvSettingsPanel.AutoScroll = true;
-            indvSettingsPanel.BackColor = SystemColors.Highlight;
-            indvSettingsPanel.Location = new Point(8, 43);
+            indvSettingsPanel.BackColor = SystemColors.ControlLight;
+            indvSettingsPanel.Location = new Point(9, 57);
+            indvSettingsPanel.Margin = new Padding(3, 4, 3, 4);
             indvSettingsPanel.Name = "indvSettingsPanel";
-            indvSettingsPanel.Size = new Size(416, 254);
+            indvSettingsPanel.Size = new Size(475, 339);
             indvSettingsPanel.TabIndex = 2;
             indvSettingsPanel.Paint += flowLayoutPanel1_Paint;
             // 
@@ -60,19 +62,20 @@
             // 
             sectionNameLabel.AutoSize = true;
             sectionNameLabel.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sectionNameLabel.Location = new Point(8, 8);
+            sectionNameLabel.Location = new Point(9, 11);
             sectionNameLabel.Name = "sectionNameLabel";
-            sectionNameLabel.Size = new Size(176, 32);
+            sectionNameLabel.Size = new Size(218, 41);
             sectionNameLabel.TabIndex = 0;
             sectionNameLabel.Text = "Setting Section";
             // 
             // SettingSection
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SettingSection";
-            Size = new Size(432, 320);
+            Size = new Size(494, 427);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

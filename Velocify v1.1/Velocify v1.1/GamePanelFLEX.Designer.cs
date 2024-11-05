@@ -39,7 +39,7 @@ namespace Velocify_v1._1
             // 
             gameLibraryPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gameLibraryPanel.AutoScroll = true;
-            gameLibraryPanel.BackColor = SystemColors.ActiveCaptionText;
+            gameLibraryPanel.BackColor = SystemColors.ButtonFace;
             gameLibraryPanel.Controls.Add(gameAddButton1);
             gameLibraryPanel.Location = new Point(0, 0);
             gameLibraryPanel.Margin = new Padding(3, 4, 3, 4);
