@@ -56,7 +56,6 @@
             indvSettingsPanel.Name = "indvSettingsPanel";
             indvSettingsPanel.Size = new Size(475, 339);
             indvSettingsPanel.TabIndex = 2;
-            indvSettingsPanel.Paint += flowLayoutPanel1_Paint;
             // 
             // sectionNameLabel
             // 

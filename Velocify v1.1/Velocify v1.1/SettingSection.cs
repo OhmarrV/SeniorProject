@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Management; 
 
 namespace Velocify_v1._1
 {
@@ -25,28 +27,6 @@ namespace Velocify_v1._1
         {
             sectionNameLabel.Text = sectionName;
         }
-
-        public void SetSettingName()
-        {
-
-        }
-
-        public void createSettingPanel()
-        {
-            //duplicate settingPanel
-
-        }
-
-        private void settingPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         public void AddSettingPanel(string gameSetting, string settingValue)
         {
@@ -71,6 +51,59 @@ namespace Velocify_v1._1
             {
                 AddSettingPanel(setting.gameSetting, setting.settingValue);
             }
+        }
+
+        public void PCSettingPanel(string pcSpec, string specName)
+        {
+            //access the user's pc specs
+            // Graphics Card
+            string gpu = GetDetailedGraphicsCardInfo();
+            AddSettingPanel("Graphics Card", gpu);
+
+            // Processor
+            string cpu = GetHardwareInfo("Win32_Processor", "Name");
+            AddSettingPanel("Processor", cpu);
+            // RAM
+            string ram = GetHardwareInfo("Win32_PhysicalMemory", "Capacity");
+            AddSettingPanel("Memory", FormatBytes(ram));
+
+            //AddSettingPanel("Graphics Card", "Nvidia 1060");
+        }
+
+        private string GetHardwareInfo(string category, string property)
+        {
+            string result = string.Empty;
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher($"SELECT {property} FROM {category}");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                result = obj[property]?.ToString();
+                break; // Only return the first result
+            }
+            return result;
+        }
+
+        private string FormatBytes(string bytes)
+        {
+            if (long.TryParse(bytes, out long byteCount))
+            {
+                double gigabytes = byteCount / (1024 * 1024 * 1024);
+                return $"{gigabytes:F2} GB";
+            }
+            return "Unknown";
+        }
+
+        private string GetDetailedGraphicsCardInfo()
+        {
+            string gpuName = string.Empty;
+            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    gpuName = obj["Caption"]?.ToString();  // "Caption" sometimes has the full name
+                    break;
+                }
+            }
+            return gpuName;
         }
     }
 }

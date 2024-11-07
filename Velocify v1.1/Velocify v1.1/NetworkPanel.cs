@@ -55,5 +55,10 @@ namespace Velocify_v1._1
                 statusLabel.Text = $"Status: Error ({ex.Message})";
             }
         }
+
+        private void latencyLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
