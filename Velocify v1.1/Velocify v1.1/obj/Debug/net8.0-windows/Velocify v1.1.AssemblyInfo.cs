@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Velocify v1.1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbff6c8f1be344d099ae5b44cfedacca0f3565a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91a244921a4caf5271ae6dfb8d5b0dcb10c527c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Velocify v1.1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Velocify v1.1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -79,12 +79,14 @@
             // specBtn
             // 
             specBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            specBtn.BackColor = SystemColors.ControlLightLight;
+            specBtn.FlatStyle = FlatStyle.Popup;
             specBtn.Location = new Point(642, 59);
             specBtn.Name = "specBtn";
             specBtn.Size = new Size(94, 29);
             specBtn.TabIndex = 3;
             specBtn.Text = "PC Specs.";
-            specBtn.UseVisualStyleBackColor = true;
+            specBtn.UseVisualStyleBackColor = false;
             specBtn.Click += specBtn_Click;
             // 
             // gameLabel
@@ -101,7 +103,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.LightGray;
             panel1.Controls.Add(settingsPanel);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);

@@ -38,6 +38,7 @@ namespace Velocify_v1._1
         {
             // Create a new SettingSection instance
             SettingSection settingSectionPanel = new SettingSection();
+            settingSectionPanel.Dock = DockStyle.Top;
 
             settingSectionPanel.PopulateSettings(currGameName, settingSectionName);
 
@@ -54,7 +55,7 @@ namespace Velocify_v1._1
             // Set the location and size
             settingSectionPanel.Location = new Point(3, newYPosition);
             settingSectionPanel.Size = new Size(700, 280); // Adjust size if needed
-            settingSectionPanel.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            //settingSectionPanel.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
             settingSectionPanel.SetSectionName(settingSectionName);
 
 
@@ -70,11 +71,13 @@ namespace Velocify_v1._1
             // Create a new SettingSection instance
             SettingSection settingSectionPanel = new SettingSection();
             settingSectionPanel.PCSettingPanel("", "");
+            settingSectionPanel.Dock = DockStyle.Top;
+
 
             // Set the location and size for the new top section
             settingSectionPanel.Location = new Point(3, 3);
             settingSectionPanel.Size = new Size(702, 400); // Adjust size if needed
-            settingSectionPanel.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            //settingSectionPanel.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
             settingSectionPanel.SetSectionName("Current PC Specifications");
 
             // Shift down existing controls to make space at the top
@@ -85,6 +88,7 @@ namespace Velocify_v1._1
 
             settingsPanel.Controls.Add(settingSectionPanel);
             settingsPanel.Controls.SetChildIndex(settingSectionPanel, 0);
+            
         }
 
         private bool specBtnClicked = false;
@@ -94,6 +98,8 @@ namespace Velocify_v1._1
             {
                 PCSettingSection();
                 specBtnClicked = true;
+                //scroll to the bottom of settingsPanel to view the new section
+                settingsPanel.VerticalScroll.Value = settingsPanel.VerticalScroll.Maximum;
             }
             else
             {
