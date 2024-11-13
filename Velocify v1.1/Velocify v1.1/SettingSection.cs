@@ -62,7 +62,11 @@ namespace Velocify_v1._1
 
             // Processor
             string cpu = GetHardwareInfo("Win32_Processor", "Name");
-            AddSettingPanel("Processor", cpu);
+            //AddSettingPanel("Processor", cpu);
+            SettingPanel settingPanelCPU = new SettingPanel();
+            settingPanelCPU.SetPanelTextBig2("Processor", cpu);
+            indvSettingsPanel.Controls.Add(settingPanelCPU);
+
             // RAM
             string ram = GetHardwareInfo("Win32_PhysicalMemory", "Capacity");
             AddSettingPanel("Memory", FormatBytes(ram));

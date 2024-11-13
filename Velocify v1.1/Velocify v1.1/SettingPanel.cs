@@ -30,12 +30,19 @@ namespace Velocify_v1._1
 
         public void SetPanelTextBig(string panel1, string panel2)
         {
-            
             label1.Text = panel1;
-            //increase font size
             label2.Text = panel2;
-            label2.Font = new Font(label2.Font.FontFamily, 5);
-            
+            label2.Height = 56;
+        }
+
+        public void SetPanelTextBig2(string panel1, string panel2)
+        {
+
+            label1.Text = panel1;
+            label2.Location = new Point(3, 60);
+            label2.Text = panel2;
+            label2.Font = new Font(label2.Font.FontFamily, 8);
+            label2.Height = 56;
         }
 
     }
