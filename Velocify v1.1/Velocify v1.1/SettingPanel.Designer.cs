@@ -40,17 +40,18 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(180, 100);
+            panel1.Size = new Size(206, 133);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 51);
+            label2.Location = new Point(3, 68);
             label2.Name = "label2";
-            label2.Size = new Size(174, 21);
+            label2.Size = new Size(199, 28);
             label2.TabIndex = 1;
             label2.Text = "Setting Value";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -58,20 +59,21 @@
             // label1
             // 
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 10);
+            label1.Location = new Point(3, 13);
             label1.Name = "label1";
-            label1.Size = new Size(174, 30);
+            label1.Size = new Size(199, 40);
             label1.TabIndex = 0;
             label1.Text = "Game Setting";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SettingPanel
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SettingPanel";
-            Size = new Size(180, 100);
+            Size = new Size(206, 133);
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }

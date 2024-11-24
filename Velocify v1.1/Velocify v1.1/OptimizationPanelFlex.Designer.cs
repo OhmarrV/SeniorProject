@@ -31,21 +31,23 @@
             settingsPanel = new Panel();
             nameUi = new PictureBox();
             namePanel = new Panel();
+            specBtn = new Button();
             gameLabel = new Label();
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)nameUi).BeginInit();
             namePanel.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // settingsPanel
             // 
             settingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             settingsPanel.AutoScroll = true;
-            settingsPanel.BackColor = SystemColors.ActiveBorder;
-            settingsPanel.Location = new Point(0, 93);
+            settingsPanel.BackColor = SystemColors.Control;
+            settingsPanel.Location = new Point(0, 99);
             settingsPanel.Margin = new Padding(3, 4, 3, 4);
             settingsPanel.Name = "settingsPanel";
-            settingsPanel.Size = new Size(743, 433);
+            settingsPanel.Size = new Size(743, 428);
             settingsPanel.TabIndex = 0;
             // 
             // nameUi
@@ -53,7 +55,7 @@
             nameUi.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             nameUi.BackColor = Color.Transparent;
             nameUi.Image = Properties.Resources.name_line;
-            nameUi.Location = new Point(7, 4);
+            nameUi.Location = new Point(7, 7);
             nameUi.Margin = new Padding(3, 4, 3, 4);
             nameUi.Name = "nameUi";
             nameUi.Size = new Size(729, 81);
@@ -63,22 +65,36 @@
             // 
             // namePanel
             // 
-            namePanel.BackColor = Color.Gainsboro;
+            namePanel.BackColor = SystemColors.Control;
+            namePanel.Controls.Add(specBtn);
             namePanel.Controls.Add(gameLabel);
             namePanel.Controls.Add(nameUi);
             namePanel.Dock = DockStyle.Top;
             namePanel.Location = new Point(0, 0);
             namePanel.Margin = new Padding(3, 4, 3, 4);
             namePanel.Name = "namePanel";
-            namePanel.Size = new Size(743, 91);
+            namePanel.Size = new Size(743, 95);
             namePanel.TabIndex = 1;
+            // 
+            // specBtn
+            // 
+            specBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            specBtn.BackColor = SystemColors.ControlLightLight;
+            specBtn.FlatStyle = FlatStyle.Popup;
+            specBtn.Location = new Point(642, 59);
+            specBtn.Name = "specBtn";
+            specBtn.Size = new Size(94, 29);
+            specBtn.TabIndex = 3;
+            specBtn.Text = "PC Specs.";
+            specBtn.UseVisualStyleBackColor = false;
+            specBtn.Click += specBtn_Click;
             // 
             // gameLabel
             // 
             gameLabel.Anchor = AnchorStyles.None;
             gameLabel.AutoEllipsis = true;
             gameLabel.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gameLabel.Location = new Point(168, 15);
+            gameLabel.Location = new Point(168, 17);
             gameLabel.Name = "gameLabel";
             gameLabel.Size = new Size(407, 60);
             gameLabel.TabIndex = 2;
@@ -87,7 +103,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(settingsPanel);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
@@ -100,12 +117,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(namePanel);
-            Controls.Add(settingsPanel);
             Controls.Add(panel1);
             Name = "OptimizationPanelFlex";
             Size = new Size(743, 527);
             ((System.ComponentModel.ISupportInitialize)nameUi).EndInit();
             namePanel.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -116,5 +133,6 @@
         private Panel namePanel;
         private Label gameLabel;
         private Panel panel1;
+        private Button specBtn;
     }
 }

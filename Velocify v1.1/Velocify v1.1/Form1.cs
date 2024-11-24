@@ -20,6 +20,8 @@ namespace Velocify_v1._1
         {
 
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             buttonClickedImg = gameButton.Image;
 
             this.Opacity = 0; //Loads form in the background
@@ -107,6 +109,7 @@ namespace Velocify_v1._1
             OptimizationPanelFlex optiFlex = new OptimizationPanelFlex(gameId);
             optiFlex.Dock = DockStyle.Fill;
             optiFlex.Show();
+
             mainPanel.Controls.Add(optiFlex);
         }
 

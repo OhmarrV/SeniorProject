@@ -62,6 +62,7 @@
             latencyLabel.Size = new Size(191, 41);
             latencyLabel.TabIndex = 0;
             latencyLabel.Text = "Network Info";
+            latencyLabel.Click += latencyLabel_Click;
             // 
             // NetworkPanel
             // 

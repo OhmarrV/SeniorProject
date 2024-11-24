@@ -13,7 +13,11 @@ namespace Velocify_v1._1
         public string coverUrl { get; set; }
         public string genre { get; set; }
 
-        public override string ToString() => name;
+        public override string ToString()
+        {
+            // Customize how games appear in the list box
+            return $"{name} (Genre: {genre ?? "Unknown"})";
+        }
 
     }
 
