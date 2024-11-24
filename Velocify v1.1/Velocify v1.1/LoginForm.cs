@@ -109,25 +109,7 @@ namespace Velocify_v1._1
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Check changed");
-            //check if the checkbox is checked
-            //if (checkBox1.Checked)
-            //{
-            //    DatabaseHelper db = new DatabaseHelper();
-            //    string sessionToken = GenerateSessionToken();
-
-            //    // Ensure `currUserId` (current logged-in user ID) is available
-            //    if (currUserId >= 0)
-            //    {
-            //        db.SaveSessionToken(currUserId, sessionToken); // Save the session token for the user
-            //        Console.WriteLine("Session token saved for 'Stay logged in' feature.");
-            //    }
-
-            //}
-            //else
-            //{
-            //    Console.WriteLine("User logging in for this session.");
-            //}
+            
         }
 
         public string GenerateSessionToken()

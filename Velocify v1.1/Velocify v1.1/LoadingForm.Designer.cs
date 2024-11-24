@@ -42,8 +42,9 @@
             panel1.Controls.Add(loadingLogo);
             panel1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(482, 318);
+            panel1.Size = new Size(422, 245);
             panel1.TabIndex = 2;
             // 
             // label1
@@ -52,9 +53,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(101, 259);
+            label1.Location = new Point(88, 194);
             label1.Name = "label1";
-            label1.Size = new Size(288, 59);
+            label1.Size = new Size(252, 51);
             label1.TabIndex = 0;
             label1.Text = "Velocify";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -65,21 +66,23 @@
             loadingLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             loadingLogo.BackColor = Color.Transparent;
             loadingLogo.Image = Properties.Resources.velocify_logo_SOLO;
-            loadingLogo.Location = new Point(89, 0);
+            loadingLogo.Location = new Point(78, 0);
+            loadingLogo.Margin = new Padding(3, 2, 3, 2);
             loadingLogo.Name = "loadingLogo";
-            loadingLogo.Size = new Size(305, 256);
+            loadingLogo.Size = new Size(267, 199);
             loadingLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             loadingLogo.TabIndex = 0;
             loadingLogo.TabStop = false;
             // 
             // LoadingForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(484, 320);
+            ClientSize = new Size(424, 240);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LoadingForm";
             Text = "LoadingForm";
             panel1.ResumeLayout(false);

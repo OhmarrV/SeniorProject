@@ -43,10 +43,9 @@ namespace Velocify_v1._1
             // 
             pictureBoxGame.BackColor = Color.Transparent;
             pictureBoxGame.Cursor = Cursors.Hand;
-            pictureBoxGame.Location = new Point(14, 4);
-            pictureBoxGame.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxGame.Location = new Point(12, 3);
             pictureBoxGame.Name = "pictureBoxGame";
-            pictureBoxGame.Size = new Size(199, 281);
+            pictureBoxGame.Size = new Size(174, 211);
             pictureBoxGame.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxGame.TabIndex = 0;
             pictureBoxGame.TabStop = false;
@@ -59,9 +58,9 @@ namespace Velocify_v1._1
             labelGame.AutoEllipsis = true;
             labelGame.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelGame.ForeColor = SystemColors.ActiveCaptionText;
-            labelGame.Location = new Point(0, 287);
+            labelGame.Location = new Point(0, 215);
             labelGame.Name = "labelGame";
-            labelGame.Size = new Size(166, 51);
+            labelGame.Size = new Size(145, 38);
             labelGame.TabIndex = 1;
             labelGame.Text = "Game Name";
             labelGame.TextAlign = ContentAlignment.MiddleCenter;
@@ -71,10 +70,9 @@ namespace Velocify_v1._1
             settingsBtn.Cursor = Cursors.Hand;
             settingsBtn.FlatStyle = FlatStyle.Popup;
             settingsBtn.ForeColor = Color.Transparent;
-            settingsBtn.Location = new Point(166, 297);
-            settingsBtn.Margin = new Padding(3, 4, 3, 4);
+            settingsBtn.Location = new Point(145, 223);
             settingsBtn.Name = "settingsBtn";
-            settingsBtn.Size = new Size(53, 40);
+            settingsBtn.Size = new Size(32, 30);
             settingsBtn.TabIndex = 2;
             settingsBtn.Text = "settings";
             settingsBtn.UseVisualStyleBackColor = true;
@@ -91,26 +89,24 @@ namespace Velocify_v1._1
             settingsDots.Cursor = Cursors.Hand;
             settingsDots.Enabled = false;
             settingsDots.Image = Properties.Resources.settingDots;
-            settingsDots.Location = new Point(166, 287);
-            settingsDots.Margin = new Padding(3, 4, 3, 4);
+            settingsDots.Location = new Point(145, 215);
             settingsDots.Name = "settingsDots";
-            settingsDots.Size = new Size(53, 56);
+            settingsDots.Size = new Size(32, 38);
             settingsDots.SizeMode = PictureBoxSizeMode.StretchImage;
             settingsDots.TabIndex = 3;
             settingsDots.TabStop = false;
             // 
             // GamePanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(settingsDots);
             Controls.Add(settingsBtn);
             Controls.Add(labelGame);
             Controls.Add(pictureBoxGame);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "GamePanel";
-            Size = new Size(229, 343);
+            Size = new Size(200, 257);
             ((System.ComponentModel.ISupportInitialize)pictureBoxGame).EndInit();
             ((System.ComponentModel.ISupportInitialize)settingsDots).EndInit();
             ResumeLayout(false);

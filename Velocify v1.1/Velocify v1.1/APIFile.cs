@@ -15,7 +15,7 @@ namespace Velocify_v1._1
     {
         // Your OAuth Token and Client ID
         private static readonly string clientId = "mq5q2stycdb2yljnhff3j344t8agcf";
-        private static readonly string accessToken = "w6a07rfrs2dhmgn6zxhuc4zpf1f0hw"; // Replace with your actual access token
+        private static readonly string accessToken = "jmb89tqr8rzoxfs0bm6z8uczanu58m"; // Replace with your actual access token
 
         // Base URL for IGDB API
         private static readonly string baseUrl = "https://api.igdb.com/v4/games";
@@ -95,21 +95,33 @@ namespace Velocify_v1._1
                 client.DefaultRequestHeaders.Add("Client-ID", clientId);
                 client.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
 
-                // Example endpoint for fetching games (you may need to change this)
-                var response = await client.GetStringAsync("https://api.igdb.com/v4/games");
+                // IGDB requires a POST request with a query for fields
+                var query = @"fields id, name, cover.url, genres.name; limit 20;"; // Adjust the query as needed
+                var content = new StringContent(query, Encoding.UTF8, "application/json");
+
+                // Send the POST request
+                var response = await client.PostAsync("https://api.igdb.com/v4/games", content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception($"API call failed with status code: {response.StatusCode} and reason: {response.ReasonPhrase}");
+                }
 
                 // Parse the JSON response
-                var jsonData = JArray.Parse(response);
+                var jsonData = JArray.Parse(await response.Content.ReadAsStringAsync());
 
                 foreach (var item in jsonData)
                 {
                     var game = new GameData
                     {
-                        id = item["id"].Value<int>(), // Assuming ID is of type int
-                        name = item["name"]?.ToString(), // Safely get name
-                        coverUrl = item["cover"]?["url"]?.ToString(), // Adjust based on the API response structure
-                        genre = item["genres"]?.First?.ToString() // Assuming genres is an array, take the first genre as an example
+                        id = item["id"].Value<int>(), // Get the ID
+                        name = item["name"]?.ToString(), // Safely get the name
+                        coverUrl = item["cover"]?["url"]?.ToString()?.Replace("t_thumb", "t_cover_big"), // Convert thumbnail to big cover
+                        genre = item["genres"] != null && item["genres"].Any()
+                                    ? item["genres"].First?["name"]?.ToString() // Safely get the first genre
+                                    : "Unknown" // Default to "Unknown" if genres are missing
                     };
+
                     gameList.Add(game);
                 }
             }
@@ -215,8 +227,10 @@ namespace Velocify_v1._1
                 return games;
             }
 
-            
-    }
+
+
+
+        }
 
 
 

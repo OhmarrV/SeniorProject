@@ -77,7 +77,6 @@ namespace Velocify_v1._1
         public async void gameAddBtnLoad(string id)
         {
             GamePanel gamePanel = new GamePanel();
-
             var gameDataResponse = await APIFile.GetGameByIdAsync(id);
             JArray gameDataArray = JArray.Parse(gameDataResponse);
 
@@ -100,6 +99,7 @@ namespace Velocify_v1._1
                 }
 
                 gamePanel.Controls["settingsBtn"].Tag = id;
+
             }
 
             gameLibraryPanel.Controls.Add(gamePanel);
@@ -110,4 +110,7 @@ namespace Velocify_v1._1
 
         }
     }
+
+
+
 }

@@ -92,17 +92,16 @@ namespace Velocify_v1._1
             // Create a new ToolStripDropDown
             ToolStripDropDown dropDownMenu = new ToolStripDropDown();
 
-            // Create "Remove" and "Move" menu items
+            // Create "Remove" menu item
             ToolStripMenuItem removeItem = new ToolStripMenuItem("Remove");
-            ToolStripMenuItem moveItem = new ToolStripMenuItem("Move");
+
 
             // Add click events to the items
             removeItem.Click += RemovePanel;
-            //moveItem.Click += MoveItem_Click;
 
             // Add the items to the ToolStripDropDown
             dropDownMenu.Items.Add(removeItem);
-            dropDownMenu.Items.Add(moveItem);
+
 
             // Show the drop-down menu at the button's location
             dropDownMenu.Show(settingsBtn, new System.Drawing.Point(0, settingsBtn.Height));
@@ -134,5 +133,8 @@ namespace Velocify_v1._1
             // Set the region of the PictureBox to the rounded rectangle path
             pictureBox.Region = new Region(path);
         }
+
+
+
     }
 }
