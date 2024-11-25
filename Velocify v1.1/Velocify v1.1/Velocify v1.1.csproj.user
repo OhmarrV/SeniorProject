@@ -31,9 +31,6 @@
     <Compile Update="MainPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="NetworkPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="NetworkPanelFLEX.cs">
       <SubType>UserControl</SubType>
     </Compile>
