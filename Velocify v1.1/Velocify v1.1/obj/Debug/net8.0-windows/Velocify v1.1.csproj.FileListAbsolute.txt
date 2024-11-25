@@ -586,7 +586,6 @@ C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\Sen
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.LoadingForm.resources
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.LoginForm.resources
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.MainPanel.resources
-C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.NetworkPanel.resources
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.NetworkPanelFLEX.resources
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.OptimizationPanelFlex.resources
 C:\Users\omarv\OneDrive\Documents\Fall 24 Workspace\Senior Project git\11-17\SeniorProject\Velocify v1.1\Velocify v1.1\obj\Debug\net8.0-windows\Velocify_v1._1.Properties.Resources.resources
