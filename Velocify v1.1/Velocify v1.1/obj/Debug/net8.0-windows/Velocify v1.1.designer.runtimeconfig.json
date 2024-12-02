@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\jacom\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\jacom\\.nuget\\packages"
+      "C:\\Users\\lumen\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lumen\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

@@ -15,7 +15,7 @@ namespace Velocify_v1._1
     {
         // Your OAuth Token and Client ID
         private static readonly string clientId = "mq5q2stycdb2yljnhff3j344t8agcf";
-        private static readonly string accessToken = "w6a07rfrs2dhmgn6zxhuc4zpf1f0hw"; // Replace with your actual access token
+        private static readonly string accessToken = "jmb89tqr8rzoxfs0bm6z8uczanu58m"; // Replace with your actual access token
 
         // Base URL for IGDB API
         private static readonly string baseUrl = "https://api.igdb.com/v4/games";

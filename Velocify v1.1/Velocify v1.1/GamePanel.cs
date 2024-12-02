@@ -30,11 +30,12 @@ namespace Velocify_v1._1
         {
 
             string gId = this.Controls["settingsBtn"].Tag.ToString();
+            string CurrgameName = this.Controls["labelGame"].Text;
             MessageBox.Show("GamePanel.cs ID: " + gId);
 
             Form1 form1 = (Form1)this.FindForm();
 
-            form1.change_Panel(gId);//Pass into change_Panel(GAME_ID) 
+            form1.change_Panel(gId, CurrgameName);//Pass into change_Panel(GAME_ID) 
         }
 
 

@@ -55,19 +55,19 @@ namespace Velocify_v1._1
             panel1.Controls.Add(netButton);
             panel1.Controls.Add(gameButton);
             panel1.Location = new Point(0, -1);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(157, 607);
+            panel1.Size = new Size(196, 759);
             panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.velocify_logo_SOLO;
-            pictureBox1.Location = new Point(38, 19);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(48, 24);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 80);
+            pictureBox1.Size = new Size(100, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -76,9 +76,10 @@ namespace Velocify_v1._1
             // 
             label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(0, 100);
+            label1.Location = new Point(0, 125);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(157, 55);
+            label1.Size = new Size(196, 69);
             label1.TabIndex = 3;
             label1.Text = "Velocify";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -89,12 +90,12 @@ namespace Velocify_v1._1
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.ControlText;
-            button3.Location = new Point(-8, 388);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(-10, 485);
+            button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Size = new Size(172, 83);
+            button3.Size = new Size(215, 104);
             button3.TabIndex = 2;
-            button3.Text = "API Test";
+            button3.Text = "User Feedback";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
@@ -102,21 +103,20 @@ namespace Velocify_v1._1
             // 
             netButton.AccessibleName = "";
             netButton.BackColor = SystemColors.Control;
+            netButton.BackgroundImageLayout = ImageLayout.Zoom;
             netButton.FlatStyle = FlatStyle.Popup;
             netButton.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             netButton.ForeColor = SystemColors.ControlText;
-            netButton.Location = new Point(-8, 254);
-            netButton.Margin = new Padding(3, 4, 3, 4);
+            netButton.ImageAlign = ContentAlignment.MiddleLeft;
+            netButton.Location = new Point(-10, 318);
+            netButton.Margin = new Padding(4, 5, 4, 5);
             netButton.Name = "netButton";
-            netButton.Size = new Size(172, 83);
+            netButton.Padding = new Padding(12, 0, 0, 0);
+            netButton.Size = new Size(215, 104);
             netButton.TabIndex = 1;
             netButton.Text = "Networking";
             netButton.UseVisualStyleBackColor = false;
             netButton.Click += netButton_Click;
-            netButton.Padding = new Padding(10, 0, 0, 0);
-            netButton.Image = null;
-            netButton.ImageAlign = ContentAlignment.MiddleLeft;
-            netButton.BackgroundImageLayout = ImageLayout.Zoom;
             // 
             // gameButton
             // 
@@ -126,13 +126,12 @@ namespace Velocify_v1._1
             gameButton.FlatStyle = FlatStyle.Popup;
             gameButton.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             gameButton.Image = (Image)resources.GetObject("gameButton.Image");
-            gameButton.Image = SetImageOpacity((Image)resources.GetObject("gameButton.Image"), 0.5f);
             gameButton.ImageAlign = ContentAlignment.MiddleLeft;
-            gameButton.Location = new Point(-8, 172);
-            gameButton.Margin = new Padding(3, 4, 3, 4);
+            gameButton.Location = new Point(-10, 215);
+            gameButton.Margin = new Padding(4, 5, 4, 5);
             gameButton.Name = "gameButton";
-            gameButton.Padding = new Padding(10, 0, 0, 0);
-            gameButton.Size = new Size(172, 83);
+            gameButton.Padding = new Padding(12, 0, 0, 0);
+            gameButton.Size = new Size(215, 104);
             gameButton.TabIndex = 0;
             gameButton.Text = "Games";
             gameButton.UseVisualStyleBackColor = false;
@@ -143,10 +142,10 @@ namespace Velocify_v1._1
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Gainsboro;
             panel2.Controls.Add(userInfo1);
-            panel2.Location = new Point(155, -1);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(194, -1);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(743, 76);
+            panel2.Size = new Size(929, 95);
             panel2.TabIndex = 2;
             // 
             // userInfo1
@@ -154,10 +153,10 @@ namespace Velocify_v1._1
             userInfo1.AccessibleRole = AccessibleRole.PushButton;
             userInfo1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             userInfo1.BackColor = Color.Transparent;
-            userInfo1.Location = new Point(683, 13);
-            userInfo1.Margin = new Padding(3, 5, 3, 5);
+            userInfo1.Location = new Point(854, 16);
+            userInfo1.Margin = new Padding(4, 6, 4, 6);
             userInfo1.Name = "userInfo1";
-            userInfo1.Size = new Size(49, 53);
+            userInfo1.Size = new Size(61, 66);
             userInfo1.TabIndex = 0;
             userInfo1.Load += userInfo1_Load;
             // 
@@ -165,21 +164,21 @@ namespace Velocify_v1._1
             // 
             mainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mainPanel.BackColor = SystemColors.ActiveCaptionText;
-            mainPanel.Location = new Point(155, 75);
-            mainPanel.Margin = new Padding(3, 4, 3, 4);
+            mainPanel.Location = new Point(194, 94);
+            mainPanel.Margin = new Padding(4, 5, 4, 5);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(743, 531);
+            mainPanel.Size = new Size(929, 664);
             mainPanel.TabIndex = 3;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(1142, 750);
             Controls.Add(mainPanel);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
@@ -217,6 +216,5 @@ namespace Velocify_v1._1
             }
             return bmp;
         }
-
     }
 }

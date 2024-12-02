@@ -92,19 +92,22 @@ namespace Velocify_v1._1
             
         }
 
+
         private void button3_Click(object sender, EventArgs e)
         {
-            APITestForm APIForm = new APITestForm();
-            APIForm.Show();
-            this.Hide();
+            FeedbackForm feedbackForm = new FeedbackForm();
+            feedbackForm.ShowDialog(); // Opens the form as a modal dialog
 
         }
 
-        public void change_Panel(string gameId)//PASS IN GAME_ID 
+        public void change_Panel(string gameId, string CurrgameName)//PASS IN GAME_ID 
         {
             //USE GAMEID TO CHANGE TO SPECIFIC PANEL WITH GAME INFO
             mainPanel.Controls.Clear();
-            OptimizationPanelFlex optiFlex = new OptimizationPanelFlex(gameId);
+            OptimizationPanelFlex optiFlex = new OptimizationPanelFlex(gameId)
+            {
+                currGameName = CurrgameName // Set the GameName property
+            };
             optiFlex.Dock = DockStyle.Fill;
             optiFlex.Show();
             mainPanel.Controls.Add(optiFlex);
