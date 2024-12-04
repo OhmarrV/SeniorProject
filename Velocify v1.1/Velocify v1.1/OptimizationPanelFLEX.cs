@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,9 @@ namespace Velocify_v1._1
             {
                 CreateSettingSection(sectionName);
             }
+
+            Wiki.Click += new EventHandler(button1_Click);
+            button3.Click += new EventHandler(button3_Click);
         }
 
         private void CreateSettingSection(string settingSectionName)
@@ -104,6 +108,55 @@ namespace Velocify_v1._1
             else
             {
                 MessageBox.Show("Already displaying computer specifications.");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(currGameName))
+            {
+                Debug.WriteLine($"Opening Wikipedia page for: {currGameName}");
+                try
+                {
+                    string url = $"https://en.wikipedia.org/wiki/{Uri.EscapeDataString(currGameName)}";
+                    WikiBrowserForm wikiBrowserForm = new WikiBrowserForm(url);
+                    wikiBrowserForm.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to open link: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Game name is not set.");
+            }
+        }
+
+        private void GamingScan_Click(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(currGameName))
+            {
+                Debug.WriteLine($"Opening GamingScan page for: {currGameName}");
+                try
+                {
+                    string url = $"https://www.gamingscan.com/best-settings-{Uri.EscapeDataString(currGameName.ToLower().Replace(" ", "-"))}/";
+                    GamingScan gamingScan = new GamingScan(url);
+                    gamingScan.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to open link: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Game name is not set.");
             }
         }
     }

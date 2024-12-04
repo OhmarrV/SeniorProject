@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\11-17\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {}
+    "C:\\Users\\lumen\\OneDrive\\Desktop\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\11-17\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {
+    "C:\\Users\\lumen\\OneDrive\\Desktop\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\11-17\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+        "projectUniqueName": "C:\\Users\\lumen\\OneDrive\\Desktop\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
         "projectName": "Velocify v1.1",
-        "projectPath": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\11-17\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
-        "packagesPath": "C:\\Users\\omarv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omarv\\OneDrive\\Documents\\Fall 24 Workspace\\Senior Project git\\11-17\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
+        "projectPath": "C:\\Users\\lumen\\OneDrive\\Desktop\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\Velocify v1.1.csproj",
+        "packagesPath": "C:\\Users\\lumen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lumen\\OneDrive\\Desktop\\SeniorProject\\Velocify v1.1\\Velocify v1.1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\omarv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\lumen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +45,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.2903.40, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -85,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

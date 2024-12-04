@@ -34,6 +34,8 @@
             specBtn = new Button();
             gameLabel = new Label();
             panel1 = new Panel();
+            Wiki = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)nameUi).BeginInit();
             namePanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -44,10 +46,10 @@
             settingsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             settingsPanel.AutoScroll = true;
             settingsPanel.BackColor = SystemColors.Control;
-            settingsPanel.Location = new Point(0, 99);
-            settingsPanel.Margin = new Padding(3, 4, 3, 4);
+            settingsPanel.Location = new Point(0, 124);
+            settingsPanel.Margin = new Padding(4, 5, 4, 5);
             settingsPanel.Name = "settingsPanel";
-            settingsPanel.Size = new Size(743, 428);
+            settingsPanel.Size = new Size(929, 535);
             settingsPanel.TabIndex = 0;
             // 
             // nameUi
@@ -55,10 +57,10 @@
             nameUi.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             nameUi.BackColor = Color.Transparent;
             nameUi.Image = Properties.Resources.name_line;
-            nameUi.Location = new Point(7, 7);
-            nameUi.Margin = new Padding(3, 4, 3, 4);
+            nameUi.Location = new Point(9, 9);
+            nameUi.Margin = new Padding(4, 5, 4, 5);
             nameUi.Name = "nameUi";
-            nameUi.Size = new Size(729, 81);
+            nameUi.Size = new Size(911, 101);
             nameUi.SizeMode = PictureBoxSizeMode.StretchImage;
             nameUi.TabIndex = 1;
             nameUi.TabStop = false;
@@ -66,14 +68,16 @@
             // namePanel
             // 
             namePanel.BackColor = SystemColors.Control;
+            namePanel.Controls.Add(button3);
+            namePanel.Controls.Add(Wiki);
             namePanel.Controls.Add(specBtn);
             namePanel.Controls.Add(gameLabel);
             namePanel.Controls.Add(nameUi);
             namePanel.Dock = DockStyle.Top;
             namePanel.Location = new Point(0, 0);
-            namePanel.Margin = new Padding(3, 4, 3, 4);
+            namePanel.Margin = new Padding(4, 5, 4, 5);
             namePanel.Name = "namePanel";
-            namePanel.Size = new Size(743, 95);
+            namePanel.Size = new Size(929, 119);
             namePanel.TabIndex = 1;
             // 
             // specBtn
@@ -81,9 +85,10 @@
             specBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             specBtn.BackColor = SystemColors.ControlLightLight;
             specBtn.FlatStyle = FlatStyle.Popup;
-            specBtn.Location = new Point(642, 59);
+            specBtn.Location = new Point(802, 74);
+            specBtn.Margin = new Padding(4, 4, 4, 4);
             specBtn.Name = "specBtn";
-            specBtn.Size = new Size(94, 29);
+            specBtn.Size = new Size(118, 36);
             specBtn.TabIndex = 3;
             specBtn.Text = "PC Specs.";
             specBtn.UseVisualStyleBackColor = false;
@@ -94,9 +99,10 @@
             gameLabel.Anchor = AnchorStyles.None;
             gameLabel.AutoEllipsis = true;
             gameLabel.Font = new Font("Verdana", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gameLabel.Location = new Point(168, 17);
+            gameLabel.Location = new Point(210, 21);
+            gameLabel.Margin = new Padding(4, 0, 4, 0);
             gameLabel.Name = "gameLabel";
-            gameLabel.Size = new Size(407, 60);
+            gameLabel.Size = new Size(509, 75);
             gameLabel.TabIndex = 2;
             gameLabel.Text = "Game Name";
             gameLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -107,19 +113,46 @@
             panel1.Controls.Add(settingsPanel);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(743, 527);
+            panel1.Size = new Size(929, 659);
             panel1.TabIndex = 0;
+            // 
+            // Wiki
+            // 
+            Wiki.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            Wiki.BackColor = SystemColors.ControlLightLight;
+            Wiki.FlatStyle = FlatStyle.Popup;
+            Wiki.Location = new Point(9, 74);
+            Wiki.Margin = new Padding(4);
+            Wiki.Name = "Wiki";
+            Wiki.Size = new Size(118, 36);
+            Wiki.TabIndex = 4;
+            Wiki.Text = "Wiki";
+            Wiki.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button3.BackColor = SystemColors.ControlLightLight;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Location = new Point(160, 74);
+            button3.Margin = new Padding(4);
+            button3.Name = "button3";
+            button3.Size = new Size(118, 36);
+            button3.TabIndex = 5;
+            button3.Text = "Game Scan";
+            button3.UseVisualStyleBackColor = false;
             // 
             // OptimizationPanelFlex
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(namePanel);
             Controls.Add(panel1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "OptimizationPanelFlex";
-            Size = new Size(743, 527);
+            Size = new Size(929, 659);
             ((System.ComponentModel.ISupportInitialize)nameUi).EndInit();
             namePanel.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -134,5 +167,7 @@
         private Label gameLabel;
         private Panel panel1;
         private Button specBtn;
+        private Button button3;
+        private Button Wiki;
     }
 }
