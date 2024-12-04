@@ -1,0 +1,5 @@
+/bin/
+/obj/
+*.cache
+*.db
+Velocify v1.1/Velocify v1.1/bin/Debug/net8.0-windows/
