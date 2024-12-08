@@ -92,7 +92,7 @@ namespace Velocify_v1._1
 
             settingsPanel.Controls.Add(settingSectionPanel);
             settingsPanel.Controls.SetChildIndex(settingSectionPanel, 0);
-            
+
         }
 
         private bool specBtnClicked = false;
@@ -158,6 +158,11 @@ namespace Velocify_v1._1
             {
                 MessageBox.Show("Game name is not set.");
             }
+        }
+
+        private void Wiki_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
